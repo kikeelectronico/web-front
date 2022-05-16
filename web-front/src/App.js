@@ -11,7 +11,7 @@ function App() {
       <Navbar/>
       <Hello/>
       <SectionTitle title="Proyectos de hardware" image="soldering.png"/>
-      <Projects/>
+      <Projects type="hardware"/>
     </div>
   );
 }

@@ -5,7 +5,7 @@ import Label from "./Label";
 
 const API = "http://" + window.location.hostname + ":8000"
 
-export default function Projects() {
+export default function Projects(props) {
 
   const [projects, setProjects] = useState([]);
 
@@ -14,7 +14,7 @@ export default function Projects() {
   }, [])
 
   const getData = () => {
-    fetch(API + "/projects/?type=hardware")
+    fetch(API + "/projects/?type=" + props.type)
     .then((response) => response.json())
     .then((data) => setProjects(data))
     .catch((error) => console.log(error))
