@@ -12,6 +12,10 @@ function App() {
       <Hello/>
       <SectionTitle title="Proyectos de hardware" image="soldering.png"/>
       <Projects type="hardware"/>
+      <SectionTitle title="Proyectos de software" image="software.png"/>
+      <Projects type="software"/>
+      <SectionTitle title="Otros proyectos" image="list.png"/>
+      <Projects type="contenido"/>
     </div>
   );
 }
