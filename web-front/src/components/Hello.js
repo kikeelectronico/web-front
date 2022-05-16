@@ -14,7 +14,7 @@ export default function Hello() {
         </div>
       </div>
       <div className="hello-column">
-        <img className="hello-profile" alt="Enrique's profile image" src="enrique-profile.jpg"/>
+        <img className="hello-profile" alt="Enrique's profile" src="enrique-profile.jpg"/>
       </div>
     </div>
   )
