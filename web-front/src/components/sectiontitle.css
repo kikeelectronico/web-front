@@ -4,15 +4,21 @@
   display: flex;
   margin-top: 20px;
   margin-bottom: 10px;
+  padding: 10px;
   border-bottom: 1px solid lightgrey;
+  position: relative;
 }
 
 .section-title-icon {
-  height: 50px;
+  height: 40px;
 }
 
 .section-title-title {
-  margin-left: 20px;
+  margin: 0px;
+  margin-left: 60px;
+  margin-bottom: 10px;
+  bottom: 0px;
   font-size: 25px;
   color: #333;
+  position: absolute;
 }
