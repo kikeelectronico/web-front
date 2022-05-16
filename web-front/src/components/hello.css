@@ -1,0 +1,37 @@
+.hello-section {
+  width: 60%;
+  margin-left: 20%;
+  display: flex;
+}
+
+.hello-column {
+  flex: 1;
+  padding: 20px;
+  text-align: justify;
+  vertical-align: middle;
+}
+
+.hello-content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hello-content h2 {
+  font-size: 40px;
+  margin-top: 0px;
+}
+
+.hello-content p {
+  font-size: 20px;
+  color: grey;
+}
+
+.hello-profile {
+  width: 80%;
+  margin-left: 10%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 10px;
+}
