@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar';
 import Hello from './components/Hello';
+import SectionTitle from './components/SectionTitle';
 
 import './App.css';
 
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
       <Navbar/>
       <Hello/>
+      <SectionTitle title="Proyectos de hardware" image="soldering.png"/>
     </div>
   );
 }

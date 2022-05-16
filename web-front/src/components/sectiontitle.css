@@ -1,0 +1,18 @@
+.section-title {
+  width: 60%;
+  margin-left: 20%;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.section-title-icon {
+  height: 50px;
+}
+
+.section-title-title {
+  margin-left: 20px;
+  font-size: 25px;
+  color: #333;
+}
