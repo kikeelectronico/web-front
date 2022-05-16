@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./projects.css"
 
+import Label from "./Label";
+
 const API = "http://" + window.location.hostname + ":8000"
 
 export default function Projects() {
@@ -24,6 +26,13 @@ export default function Projects() {
         projects.map((project) => {
           return (
             <div key={project.title} className="project-card">
+              <div className="project-labels">
+                {
+                  project.type.map(label => {
+                    return (<Label label={label}/>)
+                  })
+                }
+              </div>
               <h3 className="project-title">
                 {project.title}
               </h3>
