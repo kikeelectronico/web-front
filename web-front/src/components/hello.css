@@ -2,6 +2,8 @@
   width: 60%;
   margin-left: 20%;
   display: flex;
+  padding-top: 180px;
+  margin-top: -160px;
 }
 
 .hello-column {
