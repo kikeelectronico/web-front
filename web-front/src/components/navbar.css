@@ -22,3 +22,12 @@
 .navbar-option {
   margin-left: 20px;
 }
+
+.navbar-option a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-option-active a {
+  color: #0573e1;
+}
