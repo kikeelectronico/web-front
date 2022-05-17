@@ -4,9 +4,9 @@ import "./sectiontitle.css"
 export default function SectionTitle(props) {
 
   return (
-    <div className="section-title" id={props.id}>      
+    <section className="section-title" id={props.id}>      
       <img className="section-title-icon" alt="Icon" src={props.image}/>
       <h2 className="section-title-title">{props.title}</h2>
-    </div>
+    </section>
   )
 }

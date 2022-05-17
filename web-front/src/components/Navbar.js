@@ -1,10 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./navbar.css"
 
 export default function Navbar() {
 
+  const [active, setActive] = useState("hello");
+
+  useEffect(() => {
+    highLight();
+  }, [])
+
   const highLight = () => {
 
+    const sections = document.querySelectorAll("section");
+
+    window.addEventListener("scroll", () => {
+      const scrollY = window.pageYOffset;
+      sections.forEach(section => {
+        const section_height = section.offsetHeight;
+        const section_top = section.offsetTop - 100;
+        if(scrollY > section_top && scrollY < section_top + section_height) {
+          const section_id = section.getAttribute('id')
+          setActive(section_id)
+        }
+
+      })
+
+    })
   }
 
   return (
