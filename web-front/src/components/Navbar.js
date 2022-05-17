@@ -34,19 +34,19 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-list">
-        <div className={"navbar-option " + (active == "hello" ? "navbar-option-active" : "")}>
+        <div className={"navbar-option " + (active === "hello" ? "navbar-option-active" : "")}>
           <a href="#hello">Hola</a>
         </div>
-        <div className={"navbar-option " + (active == "hardware" ? "navbar-option-active" : "")}>
+        <div className={"navbar-option " + (active === "hardware" ? "navbar-option-active" : "")}>
           <a href="#hardware">Proyectos de hardware</a>
         </div>
-        <div className={"navbar-option " + (active == "software" ? "navbar-option-active" : "")}>
+        <div className={"navbar-option " + (active === "software" ? "navbar-option-active" : "")}>
           <a href="#software">Proyectos de software</a>
         </div>
-        <div className={"navbar-option " + (active == "others" ? "navbar-option-active" : "")}>
+        <div className={"navbar-option " + (active === "others" ? "navbar-option-active" : "")}>
           <a href="#others">Otros proyectos</a>
         </div>
-        <div className={"navbar-option " + (active == "experience" ? "navbar-option-active" : "")}>
+        <div className={"navbar-option " + (active === "experience" ? "navbar-option-active" : "")}>
           <a href="#experience">Experiencia</a>
         </div>
       </div>
