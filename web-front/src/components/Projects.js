@@ -29,7 +29,7 @@ export default function Projects(props) {
               <div className="project-labels">
                 {
                   project.type.map(label => {
-                    return (<Label label={label}/>)
+                    return (<Label key={label} label={label}/>)
                   })
                 }
               </div>
@@ -43,7 +43,7 @@ export default function Projects(props) {
               {
                 project.buttons.map((button) => {
                   return (
-                    <a className="project-button" href={button.url} target="_blanck">
+                    <a className="project-button" href={button.url} target="_blanck" key={button.title}>
                         {button.title}
                     </a>
                   )
