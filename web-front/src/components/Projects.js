@@ -21,7 +21,7 @@ export default function Projects(props) {
   }
 
   return (
-    <div className="projects-container">
+    <section className="projects-container" id={props.id}>
       {
         projects.map((project) => {
           return (
@@ -57,6 +57,6 @@ export default function Projects(props) {
           )
         })
       }
-    </div> 
+    </section> 
   )
 }
