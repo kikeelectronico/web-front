@@ -51,7 +51,7 @@ export default function Projects(props) {
               }
               </div>
 
-              <img className="project-image" src={project.image}/>
+              <img className="project-image" alt="Proyecto" src={project.image}/>
 
             </div>
           )
