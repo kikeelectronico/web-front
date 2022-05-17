@@ -15,36 +15,39 @@ export default function Navbar() {
 
     window.addEventListener("scroll", () => {
       const scrollY = window.pageYOffset;
-      sections.forEach(section => {
-        const section_height = section.offsetHeight;
-        const section_top = section.offsetTop - 100;
-        if(scrollY > section_top && scrollY < section_top + section_height) {
-          const section_id = section.getAttribute('id')
-          setActive(section_id)
-        }
+      if (scrollY < 200) {
+        setActive("hello")
+      } else {
+        sections.forEach(section => {
+          const section_height = section.offsetHeight;
+          const section_top = section.offsetTop - 100;
+          if(scrollY > section_top && scrollY < section_top + section_height) {
+            const section_id = section.getAttribute('id')
+            setActive(section_id)
+          }
 
-      })
-
+        })
+      }
     })
   }
 
   return (
     <nav className="navbar">
       <div className="navbar-list">
-        <div className="navbar-option navbar-option-active">
+        <div className={"navbar-option " + (active == "hello" ? "navbar-option-active" : "")}>
           <a href="#hello">Hola</a>
         </div>
-        <div className="navbar-option">
+        <div className={"navbar-option " + (active == "hardware" ? "navbar-option-active" : "")}>
           <a href="#hardware">Proyectos de hardware</a>
         </div>
-        <div className="navbar-option">
+        <div className={"navbar-option " + (active == "software" ? "navbar-option-active" : "")}>
           <a href="#software">Proyectos de software</a>
         </div>
-        <div className="navbar-option">
+        <div className={"navbar-option " + (active == "others" ? "navbar-option-active" : "")}>
           <a href="#others">Otros proyectos</a>
         </div>
-        <div className="navbar-option">
-          <a href="">Experiencia</a>
+        <div className={"navbar-option " + (active == "experience" ? "navbar-option-active" : "")}>
+          <a href="#experience">Experiencia</a>
         </div>
       </div>
     </nav>
