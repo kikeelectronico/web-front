@@ -8,6 +8,7 @@ const API = "http://" + window.location.hostname + ":8000"
 export default function Projects(props) {
 
   const [projects, setProjects] = useState([]);
+  const [max_cards, setMaxCards] = useState(3);
 
   useEffect(() => {
     getData();
@@ -23,7 +24,7 @@ export default function Projects(props) {
   return (
     <section className="projects-container" id={props.id}>
       {
-        projects.map((project) => {
+        projects.slice(0,max_cards).map((project) => {
           return (
             <div key={project.title} className="project-card">
               <div className="project-labels">
@@ -57,6 +58,15 @@ export default function Projects(props) {
           )
         })
       }
+      {
+        max_cards !== projects.length && projects.length > 3 ?
+        <div key="plus" className="project-card-plus" onClick={() => {setMaxCards(projects.length)}}>
+          <span className="project-plus">+</span>
+          <span className="project-plus-text">Ver más proyectos</span>
+        </div>
+        : <></>
+      }
+      
     </section> 
   )
 }

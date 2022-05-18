@@ -10,7 +10,6 @@
 }
 
 .project-card {
-  min-height: 200px;
   border: 1px solid lightgray;
   border-radius: 20px;
   display: flex;
@@ -61,4 +60,25 @@
 .project-image {
   width: 100%;
   justify-self: flex-end;
+}
+
+.project-card-plus {
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.project-plus {
+  color: #0573e1;
+  font-size: 150px;
+  font-weight: bold;
+}
+
+.project-plus-text {
+  color: #0573e1;
+  font-size: 20px;
 }
