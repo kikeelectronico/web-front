@@ -4,6 +4,7 @@ import SectionTitle from './components/SectionTitle';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Courses from './components/Courses';
+import Footer from './components/Footer';
 
 import './App.css';
 
@@ -23,6 +24,7 @@ function App() {
         <Experience id="experience"/>
         <SectionTitle title="Formación" image="list.png"/>
         <Courses id="courses"/>
+        <Footer/>
       </div>
     </div>
   );
