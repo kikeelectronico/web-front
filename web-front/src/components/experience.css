@@ -10,7 +10,7 @@
 }
 
 .experience-card {
-  min-height: 250px;
+  min-height: 100px;
   border: 1px solid lightgray;
   border-radius: 20px;
   display: flex;
@@ -66,11 +66,10 @@
 }
 
 .experience-card-plus {
-  min-height: 250px;
+  min-height: 100px;
   border: 1px solid lightgray;
   border-radius: 20px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -79,6 +78,7 @@
 .experience-plus {
   color: #0573e1;
   font-size: 150px;
+  margin-top: -20px;
   font-weight: bold;
 }
 
