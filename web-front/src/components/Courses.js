@@ -52,7 +52,7 @@ export default function Courses(props) {
         max_cards !== courses.length && courses.length > 3 ?
         <div key="plus" className="course-card-plus" onClick={() => {setMaxCards(courses.length)}}>
           <span className="course-plus">+</span>
-          <span className="course-plus-text">Ver más experiencia</span>
+          <span className="course-plus-text">Ver más cursos</span>
         </div>
         : <></>
       }
