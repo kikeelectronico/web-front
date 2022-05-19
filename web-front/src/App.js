@@ -2,6 +2,7 @@ import Navbar from './components/Navbar';
 import Hello from './components/Hello';
 import SectionTitle from './components/SectionTitle';
 import Projects from './components/Projects';
+import Experience from './components/Experience';
 
 import './App.css';
 
@@ -15,8 +16,10 @@ function App() {
         <Projects type="hardware" id="hardware"/>
         <SectionTitle title="Proyectos de software" image="software.png"/>
         <Projects type="software" id="software"/>
-        <SectionTitle title="Otros proyectos" image="list.png"/>
+        <SectionTitle title="Otros proyectos" image="hand.png"/>
         <Projects type="contenido" id="others"/>
+        <SectionTitle title="Experiencia" image="list.png"/>
+        <Experience id="experience"/>
       </div>
     </div>
   );
