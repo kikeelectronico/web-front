@@ -22,7 +22,7 @@ function App() {
         <Projects type="contenido" id="others"/>
         <SectionTitle title="Experiencia" image="list.png"/>
         <Experience id="experience"/>
-        <SectionTitle title="Formación" image="list.png"/>
+        <SectionTitle title="Formación" image="book.png"/>
         <Courses id="courses"/>
         <Footer/>
       </div>
