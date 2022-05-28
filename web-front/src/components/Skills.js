@@ -39,7 +39,7 @@ export default function Skills(props) {
         max_cards !== skills.length && skills.length > 3 ?
         <div key="plus" className="skill-card-plus" onClick={() => {setMaxCards(skills.length)}}>
           <span className="skill-plus">+</span>
-          <span className="skill-plus-text">Ver más cursos</span>
+          <span className="skill-plus-text">Ver más habilidades</span>
         </div>
         : <></>
       }
