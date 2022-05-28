@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./courses.css"
 
-const API = "http://" + window.location.hostname + ":8000"
+import API from "../constants"
 
 export default function Courses(props) {
 

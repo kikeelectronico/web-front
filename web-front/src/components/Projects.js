@@ -3,7 +3,7 @@ import "./projects.css"
 
 import Label from "./Label";
 
-const API = "http://" + window.location.hostname + ":8000"
+import API from "../constants"
 
 export default function Projects(props) {
 
