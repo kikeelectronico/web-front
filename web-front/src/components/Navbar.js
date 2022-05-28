@@ -55,6 +55,9 @@ export default function Navbar() {
         <div className={"navbar-option " + (active === "courses" ? "navbar-option-active" : "")}>
           <a href="#courses">Formación</a>
         </div>
+        <div className={"navbar-option " + (active === "interviews" ? "navbar-option-active" : "")}>
+          <a href="#interviews">Entrevistas</a>
+        </div>
       </div>
     </nav>
   )
