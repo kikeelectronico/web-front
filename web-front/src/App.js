@@ -3,6 +3,7 @@ import Hello from './components/Hello';
 import SectionTitle from './components/SectionTitle';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
+import Skills from './components/Skills';
 import Courses from './components/Courses';
 import Footer from './components/Footer';
 
@@ -22,6 +23,8 @@ function App() {
         <Projects type="contenido" id="others"/>
         <SectionTitle title="Experiencia" image="list.png"/>
         <Experience id="experience"/>
+        <SectionTitle title="Habilidades" image="puzzle.png"/>
+        <Skills id="skills"/>
         <SectionTitle title="Formación" image="book.png"/>
         <Courses id="courses"/>
         <Footer/>
