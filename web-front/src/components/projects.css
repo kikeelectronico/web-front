@@ -4,7 +4,7 @@
   padding-top: 180px;
   margin-top: -160px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 10px;
   grid-row-gap: 10px;
 }
@@ -18,9 +18,9 @@
 }
 
 .project-labels {
-  width: 100%;
-  margin-top: 20px;
-  margin-left: 30px;
+  width: 90%;
+  margin-top: 10px;
+  margin-left: 5%;
   margin-right: 30px;
   display: flex;
   flex-direction: row;
@@ -65,7 +65,10 @@
 }
 
 .project-card-plus {
-  min-height: 250px;
+  width: 60%;
+  margin-left: 20%;
+  height: 200px;
+  margin-top: 10px;
   border: 1px solid lightgray;
   border-radius: 20px;
   display: flex;
@@ -79,6 +82,7 @@
   color: #0573e1;
   font-size: 150px;
   font-weight: bold;
+  margin-top: -50px;
 }
 
 .project-plus-text {
