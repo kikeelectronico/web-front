@@ -16,6 +16,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  background-color: white;
 }
 
 .course-labels {
@@ -73,6 +74,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  background-color: white;
 }
 
 .course-plus {
