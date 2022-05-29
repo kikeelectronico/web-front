@@ -6,6 +6,7 @@ import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Courses from './components/Courses';
 import Interviews from './components/Interviews';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 import './App.css';
@@ -30,6 +31,8 @@ function App() {
         <Courses id="courses"/>
         <SectionTitle title="Entrevistas" image="mic.png"/>
         <Interviews id="interviews"/>
+        <SectionTitle title="Contacto" image="chat.png"/>
+        <Contact id="contact"/>
         <Footer/>
       </div>
     </div>
