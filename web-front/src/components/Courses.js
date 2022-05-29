@@ -13,7 +13,7 @@ export default function Courses(props) {
   }, [])
 
   const getData = () => {
-    fetch(API + "/courses/", {mode: 'cors'})
+    fetch(API + "/courses/")
     .then((response) => response.json())
     .then((data) => setCourses(data))
     .catch((error) => console.log(error))
