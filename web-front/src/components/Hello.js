@@ -12,7 +12,7 @@ export default function Hello() {
             Soy Enrique, un ingeniero electrónico enamorado del diseño y fabricación de hardware.
           </p>
           <p>
-            Trabajo en el sector de la educación creando contenidos sobre tecnología, eligíendo la más adecuada para el proyecto y creándola cuando no existe. Dedico la mayoría de mi jornada a un proyecto realmente grande para el que he creado contenido, hardware, firmware, web apps y apps móviles.
+            Trabajo en el sector de la educación creando contenidos sobre tecnología, eligiendo la más adecuada para el proyecto y creándola cuando no existe. Dedico la mayoría de mi jornada a un proyecto realmente grande para el que he creado contenido, hardware, firmware, web apps y apps móviles.
           </p>
           <p>
             Me gustan los retos ingenieriles, pero me encanta cuando están relacionados con el diseño de hardware.
