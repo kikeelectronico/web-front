@@ -22,3 +22,10 @@
   color: #333;
   position: absolute;
 }
+
+@media screen and (max-width:420px) {
+  .section-title {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
