@@ -8,3 +8,10 @@
   padding-bottom: 80px;
   background-color: #eee;
 }
+
+@media screen and (max-width:600px) {
+  .page {
+    margin-top: 0px;
+    padding-top: 20px;
+  }
+}
