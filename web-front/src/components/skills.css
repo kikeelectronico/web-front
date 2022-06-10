@@ -88,3 +88,11 @@
   color: #0573e1;
   font-size: 20px;
 }
+
+@media screen and (max-width:420px) {
+  .skills-container {
+    width: 90%;
+    margin-left: 5%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
