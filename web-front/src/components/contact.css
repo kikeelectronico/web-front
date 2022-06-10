@@ -24,3 +24,10 @@
   color: #0573e1;
   cursor: pointer;
 }
+
+@media screen and (max-width:420px) {
+  .contact-container {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
