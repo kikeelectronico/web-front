@@ -4,6 +4,7 @@ import "./navbar.css"
 export default function Navbar() {
 
   const [active, setActive] = useState("hello");
+  const [menu, setMenu] = useState(false);
 
   useEffect(() => {
     highLight();
@@ -31,9 +32,16 @@ export default function Navbar() {
     })
   }
 
+  const toggleMenu = () => {
+    setMenu(!menu)
+  }
+
   return (
-    <nav className="navbar">
+    <nav className={"navbar " + (menu ? "navbar-show" : "")}>
       <div className="navbar-list">
+        <div className="navbar-option close-nav-bar">
+            <a onClick={() => {toggleMenu()}} >{menu ? "X" : "Menú"}</a>
+        </div>
         <div className={"navbar-option " + (active === "hello" ? "navbar-option-active" : "")}>
           <a href="#hello">Hola</a>
         </div>

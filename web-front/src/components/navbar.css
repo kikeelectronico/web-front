@@ -31,3 +31,46 @@
 .navbar-option-active a {
   color: #0573e1;
 }
+
+.close-nav-bar {
+  visibility: hidden;
+}
+
+@media screen and (max-width:600px) {
+  .navbar {
+    height: auto;
+    visibility: hidden;
+    text-align: left;
+    position: fixed;
+  }
+
+  .navbar-show {
+    visibility: visible;
+  }
+
+  .navbar-list {
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    top:0;
+    transform: translateY(0%);
+    float: left;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar-option {
+    margin-top: 10px;
+  }
+
+  .close-nav-bar {
+    visibility: visible;
+    position: absolute;
+    top: -20px;
+    right: 25px;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: white;
+  }
+}
