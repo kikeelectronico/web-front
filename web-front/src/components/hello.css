@@ -37,3 +37,29 @@
   transform: translateY(-50%);
   border-radius: 10px;
 }
+
+@media screen and (max-width:420px) {
+  .hello-section {
+    width: 90%;
+    margin-left: 5%;
+    flex-direction: column;
+    padding-top: 0px;
+    margin-top: 0px;
+  }
+
+  .hello-column {
+    padding: 10px;
+  }
+  
+  .hello-content {
+    top: 0%;
+    transform: translateY(0%);
+  }
+  
+  .hello-profile {
+    width: 90%;
+    margin-left: 5%;
+    top: 0%;
+    transform: translateY(0%);
+  }
+}
