@@ -89,7 +89,7 @@
   font-size: 20px;
 }
 
-@media screen and (max-width:420px) {
+@media screen and (max-width:600px) {
   .experiences-container {
     width: 90%;
     margin-left: 5%;

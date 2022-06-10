@@ -23,7 +23,7 @@
   position: absolute;
 }
 
-@media screen and (max-width:420px) {
+@media screen and (max-width:600px) {
   .section-title {
     width: 90%;
     margin-left: 5%;
