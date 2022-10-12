@@ -54,12 +54,12 @@ export default function Navbar() {
         <div className={"navbar-option " + (active === "others" ? "navbar-option-active" : "")}>
           <a href="#others">Otros proyectos</a>
         </div>
-        <div className={"navbar-option " + (active === "experience" ? "navbar-option-active" : "")}>
+        {/*<div className={"navbar-option " + (active === "experience" ? "navbar-option-active" : "")}>
           <a href="#experience">Experiencia</a>
         </div>
         <div className={"navbar-option " + (active === "skills" ? "navbar-option-active" : "")}>
           <a href="#skills">Habilidades</a>
-        </div>
+        </div>*/}
         <div className={"navbar-option " + (active === "courses" ? "navbar-option-active" : "")}>
           <a href="#courses">Formación</a>
         </div>

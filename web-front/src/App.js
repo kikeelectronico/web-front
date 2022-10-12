@@ -36,10 +36,10 @@ function App() {
         <Projects type="software" id="software"/>
         <SectionTitle title="Otros proyectos" image="hand.png"/>
         <Projects type="contenido" id="others"/>
-        <SectionTitle title="Experiencia" image="list.png"/>
+        {/*<SectionTitle title="Experiencia" image="list.png"/>
         <Experience id="experience"/>
         <SectionTitle title="Habilidades" image="puzzle.png"/>
-        <Skills id="skills"/>
+        <Skills id="skills"/>*/}
         <SectionTitle title="Formación" image="book.png"/>
         <Courses id="courses"/>
         <SectionTitle title="Entrevistas" image="mic.png"/>
