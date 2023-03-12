@@ -93,6 +93,13 @@
 }
 
 @media screen and (max-width:600px) {
+  .interviews-section {
+    width: 100%;
+    margin-left: 0%;
+    padding-top: 180px;
+    margin-top: -160px;
+  }
+  
   .interviews-container {
     width: 90%;
     margin-left: 5%;

@@ -90,6 +90,13 @@
 }
 
 @media screen and (max-width:600px) {
+  .skills-section {
+    width: 100%;
+    margin-left: 0%;
+    padding-top: 180px;
+    margin-top: -160px;
+  }
+
   .skills-container {
     width: 90%;
     margin-left: 5%;
