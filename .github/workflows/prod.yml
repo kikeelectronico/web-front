@@ -7,6 +7,7 @@ on:
 env:
   PROJECT_ID: ${{ secrets.PROJECT_ID }}
   CONTAINER_NAME: ${{ secrets.CONTAINER_NAME }}
+  RUN_REGION: ${{ secrets.RUN_REGION }}
 
 jobs:
   setup-build-deploy:
@@ -17,26 +18,26 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: 'Authenticate to Google Cloud'
-      uses: 'google-github-actions/auth@v0'
+      uses: 'google-github-actions/auth@v1'
       with:
         credentials_json: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
     - name: Configure docker
       run: |
-        gcloud auth configure-docker europe-west1-docker.pkg.dev
+        gcloud auth configure-docker $RUN_REGION-docker.pkg.dev
     - name: Build
       run: |
-        docker build -t "europe-west1-docker.pkg.dev/$PROJECT_ID/web/$SERVICE_NAME:latest" .
+        docker build -t "$RUN_REGION-docker.pkg.dev/$PROJECT_ID/web/$SERVICE_NAME:latest" .
     - name: Detele previous images
-      run: gcloud container images delete "europe-west1-docker.pkg.dev/$PROJECT_ID/web/$SERVICE_NAME:latest" --force-delete-tags
+      run: gcloud container images delete "$RUN_REGION-docker.pkg.dev/$PROJECT_ID/web/$SERVICE_NAME:latest" --force-delete-tags
       continue-on-error: true
     - name: Publish
       run: |
-        docker push "europe-west1-docker.pkg.dev/$PROJECT_ID/web/$SERVICE_NAME:latest"
+        docker push "$RUN_REGION-docker.pkg.dev/$PROJECT_ID/web/$SERVICE_NAME:latest"
     - name: Deploy
       run: |-
         gcloud run deploy "$SERVICE_NAME" \
           --quiet \
-          --region "${{ secrets.RUN_REGION }}" \
-          --image "europe-west1-docker.pkg.dev/$PROJECT_ID/web/$SERVICE_NAME:latest" \
+          --region "$RUN_REGION" \
+          --image "$RUN_REGION-docker.pkg.dev/$PROJECT_ID/web/$SERVICE_NAME:latest" \
           --platform "managed" \
           --allow-unauthenticated
