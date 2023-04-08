@@ -6,7 +6,7 @@ on:
 
 env:
   PROJECT_ID: ${{ secrets.PROJECT_ID }}
-  CONTAINER_NAME: ${{ secrets.CONTAINER_NAME }}
+  SERVICE_NAME: ${{ secrets.SERVICE_NAME }}
   RUN_REGION: ${{ secrets.RUN_REGION }}
 
 jobs:
