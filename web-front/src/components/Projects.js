@@ -3,7 +3,7 @@ import "./projects.css"
 
 import Label from "./Label";
 
-import API from "../constants"
+const API = process.env.REACT_APP_API_URL;
 
 export default function Projects(props) {
 

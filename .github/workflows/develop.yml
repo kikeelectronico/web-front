@@ -1,14 +1,14 @@
-name: Prod - Build and Deploy
+name: Develop - Build and Deploy
 
 on:
   push:
-    branches: [ main ]
+    branches: [ develop ]
 
 env:
   PROJECT_ID: ${{ secrets.PROJECT_ID }}
-  SERVICE_NAME: ${{ secrets.SERVICE_NAME }}
+  SERVICE_NAME: web-front-develop
   RUN_REGION: ${{ secrets.RUN_REGION }}
-  REACT_APP_API_URL: https://api.enriquegomez.me
+  REACT_APP_API_URL: https://develop.api.enriquegomez.me
 
 jobs:
   setup-build-deploy:
@@ -29,6 +29,7 @@ jobs:
       run: |
         docker build -t "$RUN_REGION-docker.pkg.dev/$PROJECT_ID/web/$SERVICE_NAME:latest" \
         --build-arg REACT_APP_API_URL=$REACT_APP_API_URL .
+
     - name: Detele previous images
       run: gcloud container images delete "$RUN_REGION-docker.pkg.dev/$PROJECT_ID/web/$SERVICE_NAME:latest" --force-delete-tags
       continue-on-error: true
@@ -42,4 +43,5 @@ jobs:
           --region "$RUN_REGION" \
           --image "$RUN_REGION-docker.pkg.dev/$PROJECT_ID/web/$SERVICE_NAME:latest" \
           --platform "managed" \
-          --allow-unauthenticated
+          --allow-unauthenticated \
+          --port 80

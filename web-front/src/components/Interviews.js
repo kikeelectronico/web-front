@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./interviews.css"
 
-import API from "../constants"
+const API = process.env.REACT_APP_API_URL;
 
 export default function Interviews(props) {
 
