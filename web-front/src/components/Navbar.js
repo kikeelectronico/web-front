@@ -8,7 +8,7 @@ export default function Navbar() {
 
   useEffect(() => {
     let slug = window.location.href.split("/")[3]
-    setActive(slug.length == 0 ? "hello" : slug)
+    setActive(slug.length === 0 ? "hello" : slug)
 
   }, [])
 
@@ -20,7 +20,7 @@ export default function Navbar() {
     <nav className={"navbar " + (menu ? "navbar-show" : "")}>
       <div className="navbar-list">
         <div className="navbar-option close-nav-bar">
-            <a onClick={() => {toggleMenu()}} >{menu ? "X" : "Menú"}</a>
+            <span onClick={() => {toggleMenu()}} >{menu ? "X" : "Menú"}</span>
         </div>
         <div className={"navbar-option " + (active === "hello" ? "navbar-option-active" : "")}>
           <a href="/">Hola</a>

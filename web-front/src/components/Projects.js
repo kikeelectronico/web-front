@@ -11,15 +11,11 @@ export default function Projects(props) {
   const [max_cards, setMaxCards] = useState(3);
 
   useEffect(() => {
-    getData();
-  }, [])
-
-  const getData = () => {
     fetch(API + "/projects/?type=" + props.type)
     .then((response) => response.json())
     .then((data) => setProjects(data))
     .catch((error) => console.log(error))
-  }
+  }, [props])
 
   return (
     <div>
