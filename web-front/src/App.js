@@ -1,14 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import Navbar from './components/Navbar';
-import Hello from './components/Hello';
-import SectionTitle from './components/SectionTitle';
-import Projects from './components/Projects';
-import Experience from './components/Experience';
-import Skills from './components/Skills';
-import Courses from './components/Courses';
-import Interviews from './components/Interviews';
-import Contact from './components/Contact';
+import Hello from './pages/Hello';
 import Footer from './components/Footer';
 
 import Modal from 'react-modal';
@@ -58,7 +51,7 @@ function App() {
         <h2>Hola</h2>
         <p>Tengo una nueva página web, visítala en: <a href="https://www.enriquegomez.me">www.enriquegomez.me</a></p>      
       </Modal>
-      
+
     </div>
     </Router>
   );
