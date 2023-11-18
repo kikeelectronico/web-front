@@ -23,15 +23,14 @@ function App() {
 
   return (
     <Router>
-    <div className="App">
       <Navbar/>
-      <div className='page'>
+      {/* <div className='page'> */}
         <Routes>
           <Route exact path="/" element={<Hello/>}/>
           <Route exact path="/portfolio" element={<Portfolio/>}/>
           
         </Routes>
-      </div>
+      {/* </div> */}
       <Footer/>
 
       <Modal
@@ -43,7 +42,6 @@ function App() {
         <p>Tengo una nueva página web, visítala en: <a href="https://www.enriquegomez.me">www.enriquegomez.me</a></p>      
       </Modal>
 
-    </div>
     </Router>
   );
 }
