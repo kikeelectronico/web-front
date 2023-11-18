@@ -1,5 +1,5 @@
 .navbar {
-  width: 100%;
+  width: 100vw;
   height: 80px;
   border-bottom: 1px solid lightgrey;
   background-color: white;
