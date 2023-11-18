@@ -8,7 +8,7 @@ import SectionTitle from "../components/SectionTitle"
 export default function Portfolio() {
 
   return (
-    <div>
+    <div className="page">
       <SectionTitle title="Proyectos de hardware" image="soldering.png"/>
       <Projects type="hardware" id="hardware"/>
       <SectionTitle title="Proyectos de software" image="software.png"/>
