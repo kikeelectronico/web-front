@@ -13,6 +13,8 @@ import Footer from './components/Footer';
 
 import Modal from 'react-modal';
 
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
+
 import './App.css';
 
 function App() {
@@ -26,28 +28,27 @@ function App() {
   }, [])
 
   return (
+    <Router>
     <div className="App">
       <Navbar/>
       <div className='page'>
-        <Hello/>
-        <SectionTitle title="Proyectos de hardware" image="soldering.png"/>
-        <Projects type="hardware" id="hardware"/>
-        <SectionTitle title="Proyectos de software" image="software.png"/>
-        <Projects type="software" id="software"/>
-        <SectionTitle title="Otros proyectos" image="hand.png"/>
-        <Projects type="contenido" id="others"/>
-        {/*<SectionTitle title="Experiencia" image="list.png"/>
-        <Experience id="experience"/>
-        <SectionTitle title="Habilidades" image="puzzle.png"/>
-        <Skills id="skills"/>*/}
-        <SectionTitle title="Formación" image="book.png"/>
-        <Courses id="courses"/>
-        <SectionTitle title="Entrevistas" image="mic.png"/>
-        <Interviews id="interviews"/>
-        <SectionTitle title="Contacto" image="chat.png"/>
-        <Contact id="contact"/>
-        <Footer/>
+        <Routes>
+          <Route exact path="/" element={<Hello/>}/>
+          {/* <SectionTitle title="Proyectos de hardware" image="soldering.png"/>
+          <Projects type="hardware" id="hardware"/>
+          <SectionTitle title="Proyectos de software" image="software.png"/>
+          <Projects type="software" id="software"/>
+          <SectionTitle title="Otros proyectos" image="hand.png"/>
+          <Projects type="contenido" id="others"/>
+          <SectionTitle title="Formación" image="book.png"/>
+          <Courses id="courses"/>
+          <SectionTitle title="Entrevistas" image="mic.png"/>
+          <Interviews id="interviews"/>
+          <SectionTitle title="Contacto" image="chat.png"/>
+          <Contact id="contact"/> */}
+        </Routes>
       </div>
+      <Footer/>
 
       <Modal
         isOpen={ri_alert}
@@ -57,7 +58,9 @@ function App() {
         <h2>Hola</h2>
         <p>Tengo una nueva página web, visítala en: <a href="https://www.enriquegomez.me">www.enriquegomez.me</a></p>      
       </Modal>
+      
     </div>
+    </Router>
   );
 }
 
