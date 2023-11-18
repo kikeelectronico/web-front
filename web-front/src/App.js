@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import Navbar from './components/Navbar';
 import Hello from './pages/Hello';
+import Portfolio from "./pages/Portfolio";
 import Footer from './components/Footer';
 
 import Modal from 'react-modal';
@@ -27,18 +28,8 @@ function App() {
       <div className='page'>
         <Routes>
           <Route exact path="/" element={<Hello/>}/>
-          {/* <SectionTitle title="Proyectos de hardware" image="soldering.png"/>
-          <Projects type="hardware" id="hardware"/>
-          <SectionTitle title="Proyectos de software" image="software.png"/>
-          <Projects type="software" id="software"/>
-          <SectionTitle title="Otros proyectos" image="hand.png"/>
-          <Projects type="contenido" id="others"/>
-          <SectionTitle title="Formación" image="book.png"/>
-          <Courses id="courses"/>
-          <SectionTitle title="Entrevistas" image="mic.png"/>
-          <Interviews id="interviews"/>
-          <SectionTitle title="Contacto" image="chat.png"/>
-          <Contact id="contact"/> */}
+          <Route exact path="/portfolio" element={<Portfolio/>}/>
+          
         </Routes>
       </div>
       <Footer/>
