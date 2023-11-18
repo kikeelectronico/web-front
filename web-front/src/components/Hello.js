@@ -6,6 +6,9 @@ export default function Hello() {
   return (
     <section className="hello-section" id="hello">
       <div className="hello-column">
+        <img className="hello-profile" alt="Enrique's profile" src="enrique-profile.jpg"/>
+      </div>
+      <div className="hello-column" style={{flex: 2}}>
         <div className="hello-content">
           <h2>Electro hola</h2>
           <p>
@@ -19,9 +22,6 @@ export default function Hello() {
           </p>
           <p>Todo lo hago <i>Open Source</i> si me dejan.</p>
         </div>
-      </div>
-      <div className="hello-column">
-        <img className="hello-profile" alt="Enrique's profile" src="enrique-profile.jpg"/>
       </div>
     </section>
   )
