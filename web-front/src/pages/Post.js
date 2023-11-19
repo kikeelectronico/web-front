@@ -25,7 +25,9 @@ export default function Post() {
             {
                 loading ?
                     <>
-                        cargando...
+                        <section className="post-loading-container" >
+                            <h2>Cargando...</h2>
+                        </section>
                     </>
                 :
                     <>
