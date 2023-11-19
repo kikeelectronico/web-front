@@ -28,6 +28,9 @@ export default function Navbar() {
         <div className={"navbar-option " + (active === "portfolio" ? "navbar-option-active" : "")}>
           <a href="/portfolio">Portfolio</a>
         </div>
+        <div className={"navbar-option " + (active === "conoceme" ? "navbar-option-active" : "")}>
+          <a href="/conoceme">Conóceme</a>
+        </div>
         <div className={"navbar-option " + (active === "blog" ? "navbar-option-active" : "")}>
           <a href="/blog">Blog</a>
         </div>
