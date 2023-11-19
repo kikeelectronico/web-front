@@ -4,6 +4,7 @@ import Hello from './pages/Hello';
 import Portfolio from "./pages/Portfolio";
 import Posts from "./pages/Posts";
 import Post from "./pages/Post";
+import Contact from "./pages/Contact";
 import Footer from './components/Footer';
 
 import Modal from 'react-modal';
@@ -31,6 +32,7 @@ function App() {
           <Route exact path="/portfolio" element={<Portfolio/>}/>
           <Route exact path="/blog/" element={<Posts/>}/>
           <Route exact path="/blog/:id" element={<Post/>}/>
+          <Route exact path="/contacto" element={<Contact/>}/>
           
         </Routes>
       {/* </div> */}

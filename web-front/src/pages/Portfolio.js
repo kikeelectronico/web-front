@@ -21,7 +21,6 @@ export default function Portfolio() {
       <Interviews id="interviews"/> */}
       {/* <SectionTitle title="Contacto" image="chat.png"/>
       <Contact id="contact"/> */}
-      
     </div>
   )
 }
