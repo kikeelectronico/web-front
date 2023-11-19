@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-
 import Navbar from './components/Navbar';
 import Hello from './pages/Hello';
 import Portfolio from "./pages/Portfolio";
+import Posts from "./pages/Posts";
 import Post from "./pages/Post";
 import Footer from './components/Footer';
 
@@ -29,6 +29,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Hello/>}/>
           <Route exact path="/portfolio" element={<Portfolio/>}/>
+          <Route exact path="/blog/" element={<Posts/>}/>
           <Route exact path="/blog/:id" element={<Post/>}/>
           
         </Routes>
