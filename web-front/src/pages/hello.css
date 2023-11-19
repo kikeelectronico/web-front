@@ -21,11 +21,12 @@
 .hello-content h2 {
   font-size: 40px;
   margin-top: 0px;
+  color: #333;
 }
 
 .hello-content p {
   font-size: 20px;
-  color: grey;
+  color: #222;
 }
 
 .hello-profile {
