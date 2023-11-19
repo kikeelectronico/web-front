@@ -58,7 +58,7 @@ export default function Posts() {
                         max_cards !== posts.length && posts.length > max_cards ?
                         <div key="plus" className="post-card-plus" onClick={() => {setMaxCards(posts.length)}}>
                         <span className="post-plus">+</span>
-                        <span className="post-plus-text">Ver más cursos</span>
+                        <span className="post-plus-text">Ver más publicaciones</span>
                         </div>
                         : <></>
                     }
