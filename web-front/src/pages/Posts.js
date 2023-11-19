@@ -33,8 +33,8 @@ export default function Posts() {
                     {
                         posts.slice(0,max_cards).map((post) => {
                             return (
-                                <Link to={"/blog/" + post.id}  style={{ textDecoration: 'none' }}>
-                                    <div key={post.title} className="post-card">
+                                <Link to={"/blog/" + post.id} key={post.id}  style={{ textDecoration: 'none' }}>
+                                    <div className="post-card">
                                         <div>
                                             <img className="post-image" src={post.thumbnail_image}/>
                                         </div>
