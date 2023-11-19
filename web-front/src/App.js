@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from './components/Navbar';
 import Hello from './pages/Hello';
 import Portfolio from "./pages/Portfolio";
+import Post from "./pages/Post";
 import Footer from './components/Footer';
 
 import Modal from 'react-modal';
@@ -28,6 +29,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Hello/>}/>
           <Route exact path="/portfolio" element={<Portfolio/>}/>
+          <Route exact path="/blog/:id" element={<Post/>}/>
           
         </Routes>
       {/* </div> */}
