@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./hello.css"
 
+const API = process.env.REACT_APP_API_URL;
+
 export default function Hello() {
+
+  const [wakeUp, setWakeUp] = useState(false)
+
+  useEffect(() => {
+    if (!wakeUp)
+      fetch(API + "/")
+      .then((response) => response.json())
+      .then((data) => setWakeUp(true))
+      .catch((error) => console.log(error))
+  }, [])
 
   return (
     <div className="page hello-section">
