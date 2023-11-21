@@ -4,7 +4,7 @@ import "./hello.css"
 export default function Hello() {
 
   return (
-    <section className="hello-section" id="hello">
+    <div className="page hello-section">
       <div className="hello-column">
         <img className="hello-profile" alt="Enrique's profile" src="enrique-profile.jpg"/>
       </div>
@@ -23,6 +23,6 @@ export default function Hello() {
           <p>Todo lo hago <i>Open Source</i> si me dejan.</p>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
