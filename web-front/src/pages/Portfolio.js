@@ -7,11 +7,11 @@ export default function Portfolio() {
 
   return (
     <div className="page">
-      <SectionTitle title="Proyectos de hardware" image="soldering.png"/>
+      <SectionTitle title="Hardware" image="soldering.png"/>
       <Projects type="hardware" id="hardware"/>
-      <SectionTitle title="Proyectos de software" image="software.png"/>
+      <SectionTitle title="Software" image="software.png"/>
       <Projects type="software" id="software"/>
-      <SectionTitle title="Otros proyectos" image="hand.png"/>
+      <SectionTitle title="Otros" image="hand.png"/>
       <Projects type="contenido" id="others"/>
     </div>
   )
