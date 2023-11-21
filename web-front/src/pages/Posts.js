@@ -4,6 +4,8 @@ import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import DateRangeIcon from '@mui/icons-material/DateRange';
 import "./posts.css"
 
+import SectionTitle from "../components/SectionTitle"
+
 const API = process.env.REACT_APP_API_URL;
 
 export default function Posts() {
@@ -21,6 +23,7 @@ export default function Posts() {
 
     return (
         <div className="page">
+            <SectionTitle title="Artículos" image="book.png"/>
             {
                 posts.length === 0
                 ?
