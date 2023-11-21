@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <nav className={"navbar " + (menu ? "navbar-show" : "")}>
       <div className="navbar-list">
-        <div className="navbar-option close-nav-bar">
+        <div className={"navbar-option close-nav-bar " + (menu ? "" : "open-nav-bar")}>
             <span onClick={() => {toggleMenu()}} >{menu ? "X" : "Menú"}</span>
         </div>
         <div className={"navbar-option " + (active === "hello" ? "navbar-option-active" : "")}>
