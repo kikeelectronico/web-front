@@ -38,7 +38,7 @@ export default function Post() {
                             <h1>{post.title}</h1>
                         </div>
                         <div className="data_container">
-                            <DateRangeIcon/><span>{post.date}</span> <AutoStoriesIcon/> <span>{post.reading_time} {post.reading_time === 1 ? "minuto" : "minutos"} de lectura</span>
+                            <DateRangeIcon/><span>{post.date}</span> <AutoStoriesIcon/> <span>{post.reading_time} {post.reading_time === 1 ? "minuto" : "minutos"}</span>
                         </div>
                         <div className="content_container">
                             {

@@ -49,7 +49,7 @@ export default function Posts() {
                                                 {post.description}
                                             </p>
                                             <p className="post-data">
-                                                <DateRangeIcon/><span>{post.date}</span> <AutoStoriesIcon/> <span>{post.reading_time} {post.reading_time === 1 ? "minuto" : "minutos"} de lectura</span>
+                                                <DateRangeIcon/><span>{post.date}</span> <AutoStoriesIcon/> <span>{post.reading_time} {post.reading_time === 1 ? "minuto" : "minutos"}</span>
                                             </p>
                                         </div>                                    
                                     </div>
