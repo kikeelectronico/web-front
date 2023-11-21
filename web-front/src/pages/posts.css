@@ -80,9 +80,6 @@
 
 }
 
-
-
-
 .post-card-plus {
     min-height: 100px;
     border: 1px solid lightgray;
@@ -119,4 +116,35 @@
       margin-left: 5%;
       grid-template-columns: repeat(1, 1fr);
     }
-  }
+
+    .post-card {
+        height: auto;
+        display: block;
+        overflow: auto;
+        flex-direction: column;
+    }
+
+    .post-image {
+        width: 90%;
+        margin-left: 5%;
+        height: auto;
+    }
+    
+    .post-title {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: -10px;
+        font-size: 1.5em;
+    }
+    .post-description {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 5px;
+        font-size: 1em;
+    }
+    
+    .post-data {
+        width: 90%;
+        margin-left: 5%;    
+    }
+}
