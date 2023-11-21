@@ -13,7 +13,6 @@
 
 .header_image {
     width: 100%;
-    height: 50vh;
     border-radius: 0px 0px 20px 20px;
 }
 
@@ -71,4 +70,41 @@
     display:block;
     margin:auto;
     border-radius: 20px;
+}
+
+@media screen and (max-width:600px) {
+    .header_image_container {
+        height: auto;
+        width: 100%;
+        margin-left: 0;
+        margin-top: -40px;
+    }
+
+    .header_image {
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .title_container {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 0px;
+    }
+
+    .title_container > h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+    }
+    
+    .data_container {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 20px;
+    }
+
+    .content_container {
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 40px;
+    }
 }

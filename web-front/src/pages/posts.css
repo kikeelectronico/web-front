@@ -103,7 +103,7 @@
     font-size: 20px;
 }
   
-  @media screen and (max-width:600px) {
+@media screen and (max-width:600px) {
     .posts-section {
       width: 100%;
       margin-left: 0%;
