@@ -120,7 +120,8 @@
     .post-card {
         height: auto;
         display: block;
-        overflow: auto;
+        overflow-y: auto;
+        overflow-x: hidden;
         flex-direction: column;
     }
 
