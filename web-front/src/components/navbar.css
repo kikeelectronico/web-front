@@ -60,6 +60,7 @@
 
   .navbar-option {
     margin-top: 10px;
+    border: 1px solid lightgrey;
   }
 
   .close-nav-bar {
