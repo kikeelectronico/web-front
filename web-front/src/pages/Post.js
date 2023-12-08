@@ -13,7 +13,7 @@ export default function Post() {
     const { id } = useParams()
     const [post, setPost] = useState({})
     const [loading, setLoading] = useState(true)
-    const [overlay_image, setOverlayImage] = useState("https://www.rinconingenieril.es/wp-content/uploads/2018/04/Miniatura_fotos.jpg")
+    const [overlay_image, setOverlayImage] = useState("")
 
     useEffect(() => {
         fetch(API + "/posts/?id=" + id)
