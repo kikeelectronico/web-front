@@ -4,6 +4,8 @@ import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import DateRangeIcon from '@mui/icons-material/DateRange';
 import "./post.css"
 
+import Image from "../components/Image";
+
 const API = process.env.REACT_APP_API_URL;
 
 export default function Post() {
@@ -11,6 +13,7 @@ export default function Post() {
     const { id } = useParams()
     const [post, setPost] = useState({})
     const [loading, setLoading] = useState(true)
+    const [overlay_image, setOverlayImage] = useState("https://www.rinconingenieril.es/wp-content/uploads/2018/04/Miniatura_fotos.jpg")
 
     useEffect(() => {
         fetch(API + "/posts/?id=" + id)
@@ -50,11 +53,12 @@ export default function Post() {
                                     } else if (element.type === "title-level-3") {
                                         return (<h3>{element.text}</h3>)
                                     } else if (element.type === "image") {
-                                        return (<img src={element.url}/>)
+                                        return (<img src={element.url} onClick={() => setOverlayImage(element.url)}/>)
                                     }
                                 })
                             }
                         </div>
+                        <Image url={overlay_image} setUrl={setOverlayImage}/>
                     </>
 
             }
