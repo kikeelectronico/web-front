@@ -38,7 +38,8 @@ export default function Hello() {
         <div className="about-container">
             <div className="about-content">
               <p>
-                Me gustan los retos ingenieriles, especialmente los que están relacionados con el diseño, fabricación y testeo de hardware y tienen como objetivo mejorar la sociedad.              </p>
+                Me gustan los retos ingenieriles, especialmente los que están relacionados con el diseño, fabricación y testeo de hardware. Si se trata de construir o fabricar, me va a hacer feliz.
+              </p>
             </div>
         </div>
       </div>
