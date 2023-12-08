@@ -58,6 +58,9 @@ export default function Post() {
                                 })
                             }
                         </div>
+                        <div className="author_container">
+                            Enrique Gómez
+                        </div>
                         <Image url={overlay_image} setUrl={setOverlayImage}/>
                     </>
 

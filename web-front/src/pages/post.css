@@ -74,6 +74,15 @@
     cursor: pointer;
 }
 
+.author_container {
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 30px;
+    color: #444;
+    font-size: 1.8em;
+    font-family: Satisfy
+}
+
 @media screen and (max-width:600px) {
     .header_image_container {
         height: auto;
@@ -108,5 +117,10 @@
         width: 80%;
         margin-left: 10%;
         margin-top: 40px;
+    }
+
+    .author_container {
+        width: 80%;
+        margin-left: 10%;
     }
 }
