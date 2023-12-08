@@ -1,8 +1,12 @@
 .hello-section {
+  background-color: #E6F1FC;
+}
+
+.hello-container {
   width: 80%;
   margin-left: 10%;
   display: flex;
-  padding-top: 100px;
+  padding-top: 0px;
 }
 
 .hello-column {
@@ -14,22 +18,82 @@
 
 .hello-content {
   position: relative;
+  width: 60%;
+  margin-left: 20%;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .hello-content h2 {
   font-size: 2.5em;
+  font-family: Satisfy;
   margin-top: 0px;
   color: #333;
 }
 
 .hello-content p {
-  font-size: 1.4em;
+  font-size: 25px;
+  font-family: Raleway;
   color: #222;
 }
 
 .hello-profile {
+  width: 100%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 20px;
+}
+
+.about-section {
+  background-color: #eee;
+}
+
+.about-container {
+  width: 50%;
+  margin: 50px;
+  margin-left: 25%;
+}
+
+.about-container p {
+  font-size: 22px;
+  font-family: Raleway;
+  color: #222;
+}
+
+.job-section {
+  background-color: #B4D5F6;
+}
+
+.job-container {
+  width: 80%;
+  margin-left: 10%;
+  display: flex;
+  padding-top: 0px;
+}
+
+.job-column {
+  flex: 1;
+  padding: 20px;
+  text-align: justify;
+  vertical-align: middle;
+}
+
+.job-content {
+  width: 80%;
+  margin-left: 10%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-55%);
+}
+
+.job-content p {
+  font-size: 22px;
+  font-family: Raleway;
+  color: #222;
+}
+
+.job-picture {
   width: 100%;
   position: relative;
   top: 50%;

@@ -16,25 +16,61 @@ export default function Hello() {
   }, [])
 
   return (
-    <div className="page hello-section">
-      <div className="hello-column">
-        <img className="hello-profile" alt="Enrique's profile" src="enrique-profile.jpg"/>
-      </div>
-      <div className="hello-column" style={{flex: 2}}>
-        <div className="hello-content">
-          <h2>Electro hola</h2>
-          <p>
-            Soy Enrique, un ingeniero electrónico enamorado del diseño y fabricación de hardware.
-          </p>
-          <p>
-            Me gustan los retos ingenieriles, especialmente los que están relacionados con el diseño, fabricación y testeo de hardware y tienen como objetivo mejorar la sociedad.
-          </p>
-          <p>
-            Trabajo en el sector de la educación creando contenidos sobre tecnología, eligiendo la más adecuada para el proyecto y creándola cuando no existe. En los cinco años que llevo en el sector he creado PCB, firmware, test fixture, aplicaciones web, aplicaciones android, contenidos que combinan la tecnología con el juego para webs educativas orientadas a docentes y alumnado de educación primaria y libros de texto impresos y digitales para educación secundaria.
-          </p>
-          <p>Todo lo hago <i>Open Source</i> si me dejan.</p>
+    <div className="page">
+
+      <div className="hello-section">
+        <div className="hello-container">
+          <div className="hello-column">
+            <img className="hello-profile" alt="Enrique's profile" src="enrique-profile.jpg"/>
+          </div>
+          <div className="hello-column" style={{flex: 2}}>
+            <div className="hello-content">
+              <h2>Electro hola</h2>
+              <p>
+                Soy Enrique, ingeniero electrónico enamorado del diseño de hardware que mejora la sociedad.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
+
+      <div className="about-section">
+        <div className="about-container">
+            <div className="about-content">
+              <p>
+                Me gustan los retos ingenieriles, especialmente los que están relacionados con el diseño, fabricación y testeo de hardware y tienen como objetivo mejorar la sociedad.              </p>
+            </div>
+        </div>
+      </div>
+
+      <div className="job-section">
+        <div className="job-container">
+          <div className="job-column" style={{flex: 2}}>
+            <div className="job-content">
+              <p>
+                Trabajo en el sector de la educación creando contenidos sobre tecnología, eligiendo la más adecuada para el proyecto y creándola cuando no existe.
+              </p>
+              <p>
+                En los cinco años que llevo en el sector educativo he creado: PCB, firmware, test fixture, test software, aplicaciones web, aplicaciones Android, contenidos que combinan la tecnología con el juego para webs educativas orientadas a docentes y alumnado de educación primaria y libros de texto impresos y digitales para educación secundaria.
+              </p>
+            </div>
+          </div>
+          <div className="job-column">
+            <img className="job-picture" alt="Enrique's profile" src="manos-de-niñes.jpg"/>
+          </div>
+        </div>
+      </div>
+
+      <div className="about-section">
+        <div className="about-container">
+            <div className="about-content">
+              <p>
+                Considero que la revolución industrial más importante de lo que va de siglo es la ingeniería <i>open source</i>.
+              </p>
+            </div>
+        </div>
+      </div>
+
     </div>
   )
 }
