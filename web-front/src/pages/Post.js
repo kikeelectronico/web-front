@@ -21,7 +21,7 @@ export default function Post() {
         .then((response) => response.json())
         .then((data) => {setPost(data); setLoading(false)})
         .catch((error) => console.log(error))
-      }, [])
+      }, [id])
     
 
     return (
@@ -46,7 +46,7 @@ export default function Post() {
                             <meta property="twitter:description" content={post.description}/>
                         </Helmet>
                         <div className="header_image_container">
-                            <img className="header_image" src={post.header_image}/>
+                            <img className="header_image" src={post.header_image.url} alt={post.header_image.alt}/>
                         </div>
                         <div className="title_container">
                             <h1>{post.title}</h1>
@@ -64,8 +64,8 @@ export default function Post() {
                                     } else if (element.type === "title-level-3") {
                                         return (<h3>{element.text}</h3>)
                                     } else if (element.type === "image") {
-                                        return (<img src={element.url} onClick={() => setOverlayImage(element.url)}/>)
-                                    }
+                                        return (<img src={element.url} alt={element.alt} onClick={() => setOverlayImage(element.url)}/>)
+                                    } else return ""
                                 })
                             }
                         </div>
