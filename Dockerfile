@@ -4,7 +4,7 @@ ENV REACT_APP_API_URL=$REACT_APP_API_URL
 RUN mkdir front
 WORKDIR /front
 COPY web-front ./
-RUN npm install
+RUN npm install --no-package-lock
 RUN npm run build
 FROM nginx
 RUN mkdir /html
