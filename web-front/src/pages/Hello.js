@@ -20,8 +20,8 @@ export default function Hello() {
 
       <div className="hello-section">
         <div className="hello-container">
-          <div className="hello-column">
-            <img className="hello-profile" alt="Enrique's profile" src="enrique-profile.jpg"/>
+          <div className="hello-column" style={{paddingBottom: 0}}>
+            <img className="hello-profile" alt="Enrique's profile" src="enrique-profile.png"/>
           </div>
           <div className="hello-column" style={{flex: 2}}>
             <div className="hello-content">
