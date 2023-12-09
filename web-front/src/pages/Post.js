@@ -37,7 +37,7 @@ export default function Post() {
                     <>
                          <Helmet>
                             <title>{post.title} - Enrique Gomez</title>
-                            <meta id="meta-description" name="description" content={post.description}/>
+                            <meta name="description" content={post.description}/>
                             <meta property="og:title" content={post.title + " - Enrique Gomez"}/>
                             <meta property="og:image" content={post.header_image}/>
                             <meta property="og:description" content={post.description}/>
