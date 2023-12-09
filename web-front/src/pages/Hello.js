@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from 'react-router-dom';
 import "./hello.css"
 
 const API = process.env.REACT_APP_API_URL;
@@ -70,11 +69,11 @@ export default function Hello() {
                 Considero que la revolución industrial más importante de lo que va de siglo es la ingeniería <i>open source</i>.
               </p>
             </div>
-            <Link to={"/conoceme" } style={{ textDecoration: 'none' }}>
+            <a href={"/conoceme" } style={{ textDecoration: 'none' }}>
               <div className="about-button">
                 <span>Conoce más sobre mí</span>
               </div>
-            </Link>
+            </a>
         </div>
       </div>
 
