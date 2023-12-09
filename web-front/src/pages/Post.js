@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import DateRangeIcon from '@mui/icons-material/DateRange';
+import MetaTags from 'react-meta-tags';
 import "./post.css"
 
 import Image from "../components/Image";
@@ -34,6 +35,12 @@ export default function Post() {
                     </>
                 :
                     <>
+                         <MetaTags>
+                            <title>{post.title} - Enrique Gomez</title>
+                            <meta id="meta-description" name="description" content={post.description}/>
+                            <meta id="og-title" property="og:title" content={post.title + " - Enrique Gomez"}/>
+                            <meta id="og-image" property="og:image" content={post.header_image}/>
+                        </MetaTags>
                         <div className="header_image_container">
                             <img className="header_image" src={post.header_image}/>
                         </div>
