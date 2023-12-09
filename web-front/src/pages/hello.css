@@ -59,6 +59,22 @@
   color: #222;
 }
 
+.about-button {
+  width: 30%;
+  margin-left: 35%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.about-button > span {
+  text-decoration: none;
+  color: #0573e1;
+}
+
 .job-section {
   background-color: #B4D5F6;
 }
