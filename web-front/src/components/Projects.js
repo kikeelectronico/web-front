@@ -11,15 +11,11 @@ export default function Projects(props) {
   const [max_cards, setMaxCards] = useState(3);
 
   useEffect(() => {
-    getData();
-  }, [])
-
-  const getData = () => {
     fetch(API + "/projects/?type=" + props.type)
     .then((response) => response.json())
     .then((data) => setProjects(data))
     .catch((error) => console.log(error))
-  }
+  }, [props])
 
   return (
     <div>
@@ -51,9 +47,9 @@ export default function Projects(props) {
                         </p>
                         <div className="project-buttons">
                         {
-                          project.buttons.map((button) => {
+                          project.buttons.map((button, index) => {
                             return (
-                              <a className="project-button" href={button.url} target="_blanck" key={button.title}>
+                              <a className="project-button" style={{marginRight: index === project.buttons.length-1 ? 0 : 30}} href={button.url} target="_blanck" key={button.title}>
                                   {button.title}
                               </a>
                             )

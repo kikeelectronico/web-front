@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from "react";
-
 import Navbar from './components/Navbar';
-import Hello from './components/Hello';
-import SectionTitle from './components/SectionTitle';
-import Projects from './components/Projects';
-import Experience from './components/Experience';
-import Skills from './components/Skills';
-import Courses from './components/Courses';
-import Interviews from './components/Interviews';
-import Contact from './components/Contact';
+import Hello from './pages/Hello';
+import Portfolio from "./pages/Portfolio";
+import Knowme from "./pages/Knowme";
+import Posts from "./pages/Posts";
+import Post from "./pages/Post";
+import Contact from "./pages/Contact";
 import Footer from './components/Footer';
 
 import Modal from 'react-modal';
+
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 import './App.css';
 
@@ -26,28 +25,20 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
+    <Router>
       <Navbar/>
-      <div className='page'>
-        <Hello/>
-        <SectionTitle title="Proyectos de hardware" image="soldering.png"/>
-        <Projects type="hardware" id="hardware"/>
-        <SectionTitle title="Proyectos de software" image="software.png"/>
-        <Projects type="software" id="software"/>
-        <SectionTitle title="Otros proyectos" image="hand.png"/>
-        <Projects type="contenido" id="others"/>
-        {/*<SectionTitle title="Experiencia" image="list.png"/>
-        <Experience id="experience"/>
-        <SectionTitle title="Habilidades" image="puzzle.png"/>
-        <Skills id="skills"/>*/}
-        <SectionTitle title="Formación" image="book.png"/>
-        <Courses id="courses"/>
-        <SectionTitle title="Entrevistas" image="mic.png"/>
-        <Interviews id="interviews"/>
-        <SectionTitle title="Contacto" image="chat.png"/>
-        <Contact id="contact"/>
-        <Footer/>
-      </div>
+      {/* <div className='page'> */}
+        <Routes>
+          <Route exact path="/" element={<Hello/>}/>
+          <Route exact path="/portfolio" element={<Portfolio/>}/>
+          <Route exact path="/conoceme" element={<Knowme/>}/>
+          <Route exact path="/blog/" element={<Posts/>}/>
+          <Route exact path="/blog/:id" element={<Post/>}/>
+          <Route exact path="/contacto" element={<Contact/>}/>
+          
+        </Routes>
+      {/* </div> */}
+      <Footer/>
 
       <Modal
         isOpen={ri_alert}
@@ -57,7 +48,8 @@ function App() {
         <h2>Hola</h2>
         <p>Tengo una nueva página web, visítala en: <a href="https://www.enriquegomez.me">www.enriquegomez.me</a></p>      
       </Modal>
-    </div>
+
+    </Router>
   );
 }
 

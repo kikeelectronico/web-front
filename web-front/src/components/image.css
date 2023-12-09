@@ -1,0 +1,27 @@
+.image-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    cursor: pointer;
+}
+
+.image-overlay > img {
+    width: 65vw;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+    border-radius: 20px;
+}
+
+@media screen and (max-width:600px) {
+    .image-overlay > img {
+        width: 90vw;
+    }
+}

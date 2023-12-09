@@ -43,9 +43,9 @@ export default function Courses(props) {
                       <div className="course-buttons">
                       {
                         course.buttons ?
-                          course.buttons.map((button) => {
+                          course.buttons.map((button, index) => {
                             return (
-                              <a className="course-button" href={button.url} target="_blanck" key={button.title}>
+                              <a className="course-button" style={{marginRight: index === course.buttons.length-1 ? 0 : 30}} href={button.url} target="_blanck" key={button.title}>
                                   {button.title}
                               </a>
                             )

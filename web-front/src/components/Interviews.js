@@ -42,9 +42,9 @@ export default function Interviews(props) {
                         </p>
                         <div className="interview-buttons">
                         {
-                          interview.buttons.map((button) => {
+                          interview.buttons.map((button, index) => {
                             return (
-                              <a className="interview-button" href={button.url} target="_blanck" key={button.title}>
+                              <a className="interview-button" style={{marginRight: index === interview.buttons.length-1 ? 0 : 30}} href={button.url} target="_blanck" key={button.title}>
                                   {button.title}
                               </a>
                             )

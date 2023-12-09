@@ -1,12 +1,11 @@
 .navbar {
-  width: 100%;
+  width: 100vw;
   height: 80px;
   border-bottom: 1px solid lightgrey;
   background-color: white;
   z-index: 5;
   text-align: center;
   vertical-align: middle;
-  position: fixed;
 }
 
 .navbar-list {
@@ -25,7 +24,7 @@
 
 .navbar-option a {
   text-decoration: none;
-  color: black;
+  color: #222;
 }
 
 .navbar-option-active a {
@@ -63,6 +62,10 @@
     margin-top: 10px;
   }
 
+  .open-nav-bar {
+    border: 1px solid lightgrey;
+  }
+
   .close-nav-bar {
     visibility: visible;
     position: absolute;
@@ -72,5 +75,6 @@
     font-size: 30px;
     border-radius: 10px;
     background-color: white;
+    cursor: pointer;
   }
 }

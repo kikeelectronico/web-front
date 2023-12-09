@@ -51,12 +51,11 @@
   width: 100%;
   min-height: 10px;
   margin-bottom: 30px;
-  margin-top: auto;
-  justify-self: flex-end;
+  text-align: center;
 }
 
 .interview-button {
-  margin-right: 30px;
+  /* margin-right: 30px; */
   text-decoration: none;
   color: #0573e1;
 }
