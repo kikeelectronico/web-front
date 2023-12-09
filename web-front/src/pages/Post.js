@@ -38,8 +38,8 @@ export default function Post() {
                          <Helmet>
                             <title>{post.title} - Enrique Gomez</title>
                             <meta id="meta-description" name="description" content={post.description}/>
-                            <meta id="og:title" content={post.title + " - Enrique Gomez"}/>
-                            <meta id="og:image" content={post.header_image}/>
+                            <meta property="og:title" content={post.title + " - Enrique Gomez"}/>
+                            <meta property="og:image" content={post.header_image}/>
                         </Helmet>
                         <div className="header_image_container">
                             <img className="header_image" src={post.header_image}/>
