@@ -21,7 +21,7 @@ export default function Hello() {
       <div className="hello-section">
         <div className="hello-container">
           <div className="hello-column" style={{paddingBottom: 0}}>
-            <img className="hello-profile" alt="Enrique's profile" src="enrique-profile.png"/>
+            <img className="hello-profile" alt="Foto de perfil de Enrique Gómez" src="enrique-profile.png"/>
           </div>
           <div className="hello-column" style={{flex: 2}}>
             <div className="hello-content">
@@ -57,7 +57,7 @@ export default function Hello() {
             </div>
           </div>
           <div className="job-column">
-            <img className="job-picture" alt="Enrique's profile" src="manos-de-niñes.jpg"/>
+            <img className="job-picture" alt="Maños de niños y niñas sobre una mesa blanca formando un círculo con placas electrónicas entre los dedos." src="manos-de-niñes.webp"/>
           </div>
         </div>
       </div>
