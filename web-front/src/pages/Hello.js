@@ -57,7 +57,7 @@ export default function Hello() {
             </div>
           </div>
           <div className="job-column">
-            <img className="job-picture" alt="Enrique's profile" src="manos-de-niñes.jpg"/>
+            <img className="job-picture" alt="Enrique's profile" src="manos-de-niñes.webp"/>
           </div>
         </div>
       </div>
