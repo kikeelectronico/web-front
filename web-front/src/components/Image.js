@@ -9,7 +9,7 @@ export default function Image(props) {
         style={{visibility: props.url === "" ? "hidden" : "visible"}}
         onClick={() => {props.setUrl("")}}
     >
-        <img className="image-overlay-image" src={props.url}/>
+        <img className="image-overlay-image" src={props.url.split(".webp")[0] + "_big.webp"}/>
     </div>
   )
 }
