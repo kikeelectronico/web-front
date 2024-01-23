@@ -18,7 +18,7 @@ export default function Projects(props) {
     .then((response) => response.json())
     .then((data) => setProjects(data))
     .catch((error) => console.log(error))
-  }, [props])
+  }, [props, tldr])
 
   return (
     <div>
