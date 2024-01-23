@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from 'react-router-dom';
 import "./projects.css"
 
 import Label from "./Label";
@@ -7,11 +8,13 @@ const API = process.env.REACT_APP_API_URL;
 
 export default function Projects(props) {
 
+  const { tldr } = useParams()
   const [projects, setProjects] = useState([]);
   const [max_cards, setMaxCards] = useState(3);
 
   useEffect(() => {
-    fetch(API + "/projects/?type=" + props.type)
+    console.log(tldr)
+    fetch(API + "/projects/?type=" + props.type + (tldr !== undefined ? "&tldr=" + tldr : ""))
     .then((response) => response.json())
     .then((data) => setProjects(data))
     .catch((error) => console.log(error))
