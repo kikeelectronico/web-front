@@ -13,7 +13,6 @@ export default function Projects(props) {
   const [max_cards, setMaxCards] = useState(3);
 
   useEffect(() => {
-    console.log(tldr)
     fetch(API + "/projects/?type=" + props.type + (tldr !== undefined ? "&tldr=" + tldr : ""))
     .then((response) => response.json())
     .then((data) => setProjects(data))
