@@ -31,6 +31,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Hello/>}/>
           <Route exact path="/portfolio" element={<Portfolio/>}/>
+          <Route exact path="/portfolio/tldr/:tldr" element={<Portfolio/>}/>
           <Route exact path="/conoceme" element={<Knowme/>}/>
           <Route exact path="/blog/" element={<Posts/>}/>
           <Route exact path="/blog/:id" element={<Post/>}/>
