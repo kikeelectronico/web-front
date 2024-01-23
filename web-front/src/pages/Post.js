@@ -14,7 +14,7 @@ export default function Post() {
     const { id } = useParams()
     const [post, setPost] = useState({})
     const [loading, setLoading] = useState(true)
-    const [overlay_image, setOverlayImage] = useState("")
+    const [overlay_image, setOverlayImage] = useState(null)
 
     useEffect(() => {
         fetch(API + "/posts/?id=" + id)
@@ -64,7 +64,7 @@ export default function Post() {
                                     } else if (element.type === "title-level-3") {
                                         return (<h3>{element.text}</h3>)
                                     } else if (element.type === "image") {
-                                        return (<img src={element.url} alt={element.alt} onClick={() => setOverlayImage(element.url)}/>)
+                                        return (<img src={element.url} alt={element.alt} onClick={() => setOverlayImage(element)}/>)
                                     } else return ""
                                 })
                             }
@@ -72,7 +72,7 @@ export default function Post() {
                         <div className="author_container">
                             Enrique Gómez
                         </div>
-                        <Image url={overlay_image} setUrl={setOverlayImage}/>
+                        <Image image={overlay_image} setUrl={setOverlayImage}/>
                     </>
 
             }
