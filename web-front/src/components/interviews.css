@@ -110,3 +110,35 @@
     margin-left: 5%;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .interview-card {
+    background-color: #2b2b2e;
+    border-color: #2b2b2e;
+  }
+
+  .interview-title {
+    color: #dadada;
+  }
+  
+  .interview-description {
+    color: #dadada;
+  }
+
+  .interview-button {
+    color: #368fe7;
+  }
+  
+  .interview-card-plus {
+    background-color: #2b2b2e;
+    border-color: #222;
+  }
+  
+  .interview-plus {
+    color: #368fe7;
+  }
+
+  .interview-plus-text {
+    color: #368fe7;
+  }
+}

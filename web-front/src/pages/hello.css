@@ -191,3 +191,42 @@
     transform: none;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .hello-section {
+    background-color: #2b2b2e;
+  }
+
+  .hello-content h2 {
+    color: #dadada;
+  }
+
+  .hello-content p {
+    color: #dadada;
+  }
+
+  .about-section {
+    background-color: #1f2023;
+  }
+
+  .about-content p {
+    color: #dadada;
+  }
+
+  .about-button {
+    background-color: #2b2b2e;
+  }
+
+  .about-button > span{
+    color: #368fe7;
+  }
+
+  .job-section {
+    background-color: #2b2b2e;
+  }
+
+  .job-content p {
+    color: #dadada;
+  }
+
+}

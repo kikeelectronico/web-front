@@ -124,3 +124,33 @@
         margin-left: 10%;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    .title_container > h1 {
+        color: #dadada;
+    }
+    
+    .data_container {
+        color: #dadada;
+    }
+
+    .data_container > span{
+        color: #dadada;
+    }
+
+    .content_container > h2{
+        color: #dadada;
+    }
+
+    .content_container > h3{
+        color: #dadada;
+    }
+
+    .content_container > p{
+        color: #dadada;
+    }
+
+    .author_container {
+        color: #dadada;
+    }
+}

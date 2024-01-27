@@ -78,3 +78,24 @@
     cursor: pointer;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .navbar {
+    background-color: #2b2b2e;
+    border-color: #2b2b2e;
+  }
+
+  .navbar-option > a{
+    color: #dadada;
+  }
+
+  .navbar-option{
+    background-color: #2b2b2e;
+    border-color: #2b2b2e;
+    color: #dadada;
+  }
+  
+  .navbar-option-active > a{
+    color: #0573e1;
+  }
+}
