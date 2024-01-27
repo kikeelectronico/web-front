@@ -44,6 +44,7 @@ export default function Post() {
                             <meta property="twitter:title" content={post.title + " - Enrique Gomez"}/>
                             <meta property="twitter:image" content={post.header_image}/>
                             <meta property="twitter:description" content={post.description}/>
+                            <link rel="preload" fetchpriority="high" as="image" href={post.header_image.url} type="image/webp"/>
                         </Helmet>
                         <div className="header_image_container">
                             <img className="header_image" src={post.header_image.url} alt={post.header_image.alt}/>
