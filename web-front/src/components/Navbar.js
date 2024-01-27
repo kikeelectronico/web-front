@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./navbar.css"
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 export default function Navbar() {
 
@@ -20,7 +22,7 @@ export default function Navbar() {
     <nav className={"navbar " + (menu ? "navbar-show" : "")}>
       <div className="navbar-list">
         <div className={"navbar-option close-nav-bar " + (menu ? "" : "open-nav-bar")}>
-            <span onClick={() => {toggleMenu()}} >{menu ? "X" : "Menú"}</span>
+            <span onClick={() => {toggleMenu()}} >{menu ? <CloseIcon/> : <MenuIcon/>}</span>
         </div>
         <div className={"navbar-option " + (active === "hello" ? "navbar-option-active" : "")}>
           <a href="/">Hola</a>
