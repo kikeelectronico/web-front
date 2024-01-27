@@ -65,7 +65,7 @@ export default function Post() {
                                     } else if (element.type === "title-level-3") {
                                         return (<h3>{element.text}</h3>)
                                     } else if (element.type === "image") {
-                                        return (<img src={element.url} alt={element.alt} onClick={() => setOverlayImage(element)}/>)
+                                        return (<img fetchpriority="low" src={element.url} alt={element.alt} onClick={() => setOverlayImage(element)}/>)
                                     } else return ""
                                 })
                             }
