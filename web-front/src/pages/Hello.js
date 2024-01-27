@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./hello.css"
+import { Helmet } from "react-helmet";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -17,6 +18,10 @@ export default function Hello() {
 
   return (
     <div className="page">
+      <Helmet>
+        <link rel="preload" fetchpriority="high" as="image" href="/enrique-profile.png" type="image/png"/>
+        <link rel="preload" fetchpriority="high" as="image" href="/manos-de-niñes.webp" type="image/webp"/>                                            
+      </Helmet>
 
       <div className="hello-section">
         <div className="hello-container">
