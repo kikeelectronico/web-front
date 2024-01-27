@@ -12,3 +12,9 @@
 .main-footer-text {
   color: white;
 }
+
+@media (prefers-color-scheme: dark) {
+  .main-footer {
+    background-color: #0573e1;
+  }
+}

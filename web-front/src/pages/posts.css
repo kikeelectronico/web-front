@@ -149,3 +149,35 @@
         margin-left: 5%;    
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    .post-card {
+        background-color: #2b2b2e;
+        border-color: #2b2b2e;
+    }
+
+    .post-title {
+        color: #dadada;
+    }
+
+    .post-description {
+        color: #dadada;
+    }
+
+    .post-data {
+        color: #dadada;
+    }
+
+    .post-card-plus {
+        background-color: #2b2b2e;
+        border-color: #2b2b2e;
+    }
+    
+    .post-plus {
+        color: #368fe7;
+    }
+    
+    .post-plus-text {
+        color: #368fe7;
+    }
+}

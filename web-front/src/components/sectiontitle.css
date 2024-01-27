@@ -29,3 +29,13 @@
     margin-left: 5%;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .section-title {
+    border-color: #2b2b2e;
+  }
+
+  .section-title-title {
+    color: #dadada;
+  }
+}

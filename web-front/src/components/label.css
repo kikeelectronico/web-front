@@ -11,3 +11,9 @@
   font-weight: bold;
   font-size: 15px;
 }
+
+@media (prefers-color-scheme: dark) {
+  .label {
+    background-color: #0573e1;
+  }
+}
