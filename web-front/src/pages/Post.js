@@ -44,6 +44,7 @@ export default function Post() {
                             <meta property="twitter:title" content={post.title + " - Enrique Gomez"}/>
                             <meta property="twitter:image" content={post.header_image}/>
                             <meta property="twitter:description" content={post.description}/>
+                            <link rel="preload" fetchpriority="high" as="image" href={post.header_image.url} type="image/webp"/>
                         </Helmet>
                         <div className="header_image_container">
                             <img className="header_image" src={post.header_image.url} alt={post.header_image.alt}/>
@@ -64,7 +65,7 @@ export default function Post() {
                                     } else if (element.type === "title-level-3") {
                                         return (<h3>{element.text}</h3>)
                                     } else if (element.type === "image") {
-                                        return (<img src={element.url} alt={element.alt} onClick={() => setOverlayImage(element)}/>)
+                                        return (<img fetchpriority="low" src={element.url} alt={element.alt} onClick={() => setOverlayImage(element)}/>)
                                     } else return ""
                                 })
                             }

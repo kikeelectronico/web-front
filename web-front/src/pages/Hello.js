@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./hello.css"
+import { Helmet } from "react-helmet";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -17,11 +18,15 @@ export default function Hello() {
 
   return (
     <div className="page">
+      <Helmet>
+        <link rel="preload" fetchpriority="high" as="image" href="/enrique-profile.png" type="image/png"/>
+        <link rel="preload" fetchpriority="high" as="image" href="/manos-de-niñes.webp" type="image/webp"/>                                            
+      </Helmet>
 
       <div className="hello-section">
         <div className="hello-container">
           <div className="hello-column" style={{paddingBottom: 0}}>
-            <img className="hello-profile" alt="Foto de perfil de Enrique Gómez" src="enrique-profile.png"/>
+            <img className="hello-profile" alt="Foto de perfil de Enrique Gómez" fetchpriority="high" src="enrique-profile.png"/>
           </div>
           <div className="hello-column" style={{flex: 2}}>
             <div className="hello-content">
@@ -57,7 +62,7 @@ export default function Hello() {
             </div>
           </div>
           <div className="job-column">
-            <img className="job-picture" alt="Maños de niños y niñas sobre una mesa blanca formando un círculo con placas electrónicas entre los dedos." src="manos-de-niñes.webp"/>
+            <img className="job-picture" alt="Maños de niños y niñas sobre una mesa blanca formando un círculo con placas electrónicas entre los dedos." fetchpriority="high" src="manos-de-niñes.webp"/>
           </div>
         </div>
       </div>
