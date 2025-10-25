@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql, useStaticQuery } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
 import "./interviews.css"
 
@@ -31,6 +30,7 @@ export default function Interviews(props) {
       allFile(
         filter: { 
           sourceInstanceName: { eq: "content" }, 
+          extension: { regex: "/(jpg|jpeg|png|webp)/" }
           relativePath: { regex: "/knowme/interviews/" } 
         }
       ) {

@@ -45,7 +45,7 @@ export default function Projects(props) {
     }
 
     setProjects(filtered)
-  }, [data])
+  }, [data, props.type])
 
   return (
     <>
@@ -96,10 +96,10 @@ export default function Projects(props) {
           </div>
           {
             max_cards !== projects.length && projects.length > max_cards ?
-            <div key="plus" className="project-card-plus" onClick={() => {setMaxCards(projects.length)}}>
+            <button key="plus" className="project-card-plus" onClick={() => {setMaxCards(projects.length)}}>
               <span className="project-plus">+</span>
               <span className="project-plus-text">Ver más proyectos</span>
-            </div>
+            </button>
             : <></>
           }
         </section>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { graphql, useStaticQuery, Link } from "gatsby";
+// import { graphql, useStaticQuery } from "gatsby";
+import { Link } from "gatsby";
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import DateRangeIcon from '@mui/icons-material/DateRange';
 
@@ -54,7 +55,7 @@ const Blog = () => {
                                             <Link to={post.fields.slug} key={post.fields.slug}  style={{ textDecoration: 'none' }}>
                                                 <div className="post-card">
                                                     <div>
-                                                        <img className="post-image" src={post.thumbnail_image}/>
+                                                        <img className="post-image" src={post.thumbnail_image} alt="Imagen representativa del post"/>
                                                     </div>
                                                     <div className="post-data-container">
                                                         <h3 className="post-title">
