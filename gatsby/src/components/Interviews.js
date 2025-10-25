@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { graphql, useStaticQuery } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 import "./interviews.css"
 
@@ -8,7 +10,7 @@ export default function Interviews(props) {
   const [max_cards, setMaxCards] = useState(3);
 
   const data = useStaticQuery(graphql`
-    query {
+    query InterviewsAndImages {
       allInterviewsJson {
         nodes {
           title
@@ -19,12 +21,37 @@ export default function Interviews(props) {
           }
           image
           priority
+          parent {
+          ... on File {
+            name
+          }
+        }
+        }
+      }
+      allFile(
+        filter: { 
+          sourceInstanceName: { eq: "content" }, 
+          relativePath: { regex: "/knowme/interviews/" } 
+        }
+      ) {
+        nodes {
+          relativePath
+          childImageSharp {
+            gatsbyImageData(layout: CONSTRAINED)
+          }
         }
       }
     }
-  `);
+  `)
 
-const interviews = data.allInterviewsJson.nodes; 
+  const interviews = data.allInterviewsJson.nodes
+
+  // Diccionario de imágenes
+  const imagesMap = {}
+  data.allFile.nodes.forEach(node => {
+    const baseName = node.relativePath.split('/').pop().split('.').slice(0, -1).join('.')
+    imagesMap[baseName] = getImage(node.childImageSharp)
+  })
 
   return (
     <>
@@ -39,6 +66,11 @@ const interviews = data.allInterviewsJson.nodes;
             <div className="interviews-container">
               {
                 interviews.slice(0,max_cards).map((interview) => {
+
+                  const baseName = interview.parent.name 
+                  const image = imagesMap[baseName]
+                  console.log(baseName)
+
                   return (
                     <div key={interview.title} className="interview-card">
                       <h3 className="interview-title">
@@ -59,8 +91,12 @@ const interviews = data.allInterviewsJson.nodes;
                       }
                       </div>
 
-                      <img className="interview-image" alt="Proyecto" src={interview.image}/>
-
+                      <GatsbyImage
+                        image={image}
+                        alt={`Imagen representativa de ${interview.title}`}
+                        className="interview-image"
+                      />
+                     
                     </div>
                   )
                 })
