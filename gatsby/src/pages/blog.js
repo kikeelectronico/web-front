@@ -33,6 +33,8 @@ const Blog = () => {
 
     // const posts = data?.allMarkdownRemark?.nodes || [];
 
+    // TODO: load image properly
+
     const posts = []
 
     return (
