@@ -3,8 +3,8 @@
  */
 module.exports = {
   siteMetadata: {
-    title: "gatsby",
-    siteUrl: "https://www.yourdomain.tld"
+    title: "Enrique Gómez",
+    siteUrl: "https://enriquegomez.me"
   },
   plugins: [
     "gatsby-plugin-mdx",
