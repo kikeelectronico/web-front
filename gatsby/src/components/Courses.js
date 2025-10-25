@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
 import "./courses.css"
-
-const API = process.env.REACT_APP_API_URL;
 
 export default function Courses(props) {
 
@@ -67,10 +65,10 @@ export default function Courses(props) {
             }
             {
               max_cards !== courses.length && courses.length > max_cards ?
-              <div key="plus" className="course-card-plus" onClick={() => {setMaxCards(courses.length)}}>
+              <button key="plus" className="course-card-plus" onClick={() => {setMaxCards(courses.length)}}>
                 <span className="course-plus">+</span>
                 <span className="course-plus-text">Ver más cursos</span>
-              </div>
+              </button>
               : <></>
             }
           </div>            

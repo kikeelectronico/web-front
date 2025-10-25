@@ -68,10 +68,10 @@ const interviews = data.allInterviewsJson.nodes;
             </div>              
             {
               max_cards !== interviews.length && interviews.length > max_cards ?
-              <div key="plus" className="interview-card-plus" onClick={() => {setMaxCards(interviews.length)}}>
+              <button key="plus" className="interview-card-plus" onClick={() => {setMaxCards(interviews.length)}}>
                 <span className="interview-plus">+</span>
                 <span className="interview-plus-text">Ver más entrevistas</span>
-              </div>
+              </button>
               : <></>
             }
             
