@@ -62,8 +62,7 @@
 .about-button {
   width: 30%;
   margin-left: 35%;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px;
   text-align: center;
   border: 1px solid lightgray;
   border-radius: 20px;
