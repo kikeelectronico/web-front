@@ -1,9 +1,7 @@
 FROM node:lts-alpine AS base
-ARG REACT_APP_API_URL
-ENV REACT_APP_API_URL=$REACT_APP_API_URL
 RUN mkdir front
 WORKDIR /front
-COPY web-front ./
+COPY gatsby ./
 RUN npm install --no-package-lock
 RUN npm run build
 FROM nginx
