@@ -27,5 +27,13 @@ module.exports = {
         path: "./content/",
       },
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "blog",
+        path: "./content/blog/",
+      },
+    },
+    "gatsby-transformer-remark",
   ]
 };

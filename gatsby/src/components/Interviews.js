@@ -8,21 +8,21 @@ export default function Interviews(props) {
   const [max_cards, setMaxCards] = useState(3);
 
   const data = useStaticQuery(graphql`
-  query {
-    allInterviewsJson {
-      nodes {
-        title
-        description
-        buttons {
+    query {
+      allInterviewsJson {
+        nodes {
           title
-          url
+          description
+          buttons {
+            title
+            url
+          }
+          image
+          priority
         }
-        image
-        priority
       }
     }
-  }
-`);
+  `);
 
 const interviews = data.allInterviewsJson.nodes; 
 
