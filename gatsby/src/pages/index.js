@@ -4,9 +4,6 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/Layout"
 import "./index.css"
 
-
-// const API = process.env.REACT_APP_API_URL;
-
 const Index = () => {
 
   return (
