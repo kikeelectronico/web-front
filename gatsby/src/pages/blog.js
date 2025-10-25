@@ -11,28 +11,28 @@ const Blog = () => {
 
     const [max_cards, setMaxCards] = useState(3)
 
-    const data = useStaticQuery(graphql`
-        query {
-            allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
-                nodes {
-                    frontmatter {
-                        title
-                        date(formatString: "YYYY-MM-DD")
-                        reading_time
-                        summary
-                    }
-                    fields {
-                        slug
-                    }
-                    excerpt
-                }
-            }
-        }
-    `);
+    // const data = useStaticQuery(graphql`
+    //     query {
+    //         allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+    //             nodes {
+    //                 frontmatter {
+    //                     title
+    //                     date(formatString: "YYYY-MM-DD")
+    //                     reading_time
+    //                     summary
+    //                 }
+    //                 fields {
+    //                     slug
+    //                 }
+    //                 excerpt
+    //             }
+    //         }
+    //     }
+    // `);
 
-    const posts = data?.allMarkdownRemark?.nodes || [];
+    // const posts = data?.allMarkdownRemark?.nodes || [];
 
-    // const posts = []
+    const posts = []
 
     return (
         <Layout>
