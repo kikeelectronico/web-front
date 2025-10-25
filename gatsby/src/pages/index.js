@@ -49,7 +49,7 @@ const Index = () => {
                   Trabajo en el sector de la educación creando contenidos sobre tecnología, eligiendo la más adecuada para el proyecto y creándola cuando no existe.
                 </p>
                 <p>
-                  En los cinco años que llevo en el sector educativo he creado: PCB, firmware, test fixture, test software, aplicaciones web, aplicaciones Android, contenidos que combinan la tecnología con el juego para webs educativas orientadas a docentes y alumnado de educación primaria y libros de texto impresos y digitales para educación secundaria.
+                  En los siete años que llevo en el sector educativo he creado: PCB, firmware, test fixture, test software, aplicaciones web, aplicaciones Android, contenidos que combinan la tecnología con el juego para webs educativas orientadas a docentes y alumnado de educación primaria y libros de texto impresos y digitales para educación secundaria.
                 </p>
               </div>
             </div>
