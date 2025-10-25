@@ -5,7 +5,7 @@ export default function SectionTitle(props) {
 
   return (
     <section className="section-title" id={props.id}>      
-      <img className="section-title-icon" alt="Icon" src={props.image}/>
+      <img className="section-title-icon" alt="Icon" src={"/images/" + props.image}/>
       <h2 className="section-title-title">{props.title}</h2>
     </section>
   )
