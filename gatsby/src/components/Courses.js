@@ -1,23 +1,31 @@
 import React, { useState, useEffect } from "react";
+import { graphql, useStaticQuery } from "gatsby";
+
 import "./courses.css"
 
 const API = process.env.REACT_APP_API_URL;
 
 export default function Courses(props) {
 
-  const [courses, setCourses] = useState(null);
   const [max_cards, setMaxCards] = useState(3);
 
-  useEffect(() => {
-    getData();
-  }, [])
-
-  const getData = () => {
-    fetch(API + "/courses/")
-    .then((response) => response.json())
-    .then((data) => setCourses(data))
-    .catch((error) => console.log(error))
-  }
+  const data = useStaticQuery(graphql`
+    query {
+      allCoursesJson {
+        nodes {
+          title
+          description
+          buttons {
+            title
+            url
+          }
+          priority
+        }
+      }
+    }
+  `);
+  
+  const courses = data.allCoursesJson.nodes; 
 
   return (
     <div>

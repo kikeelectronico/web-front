@@ -1,23 +1,30 @@
-import React, { useState, useEffect } from "react";
-import "./interviews.css"
+import React, { useState } from "react";
+import { graphql, useStaticQuery } from "gatsby";
 
-const API = process.env.REACT_APP_API_URL;
+import "./interviews.css"
 
 export default function Interviews(props) {
 
-  const [interviews, setInterviews] = useState(null);
   const [max_cards, setMaxCards] = useState(3);
 
-  useEffect(() => {
-    getData();
-  }, [])
-
-  const getData = () => {
-    fetch(API + "/interviews/")
-    .then((response) => response.json())
-    .then((data) => setInterviews(data))
-    .catch((error) => console.log(error))
+  const data = useStaticQuery(graphql`
+  query {
+    allInterviewsJson {
+      nodes {
+        title
+        description
+        buttons {
+          title
+          url
+        }
+        image
+        priority
+      }
+    }
   }
+`);
+
+const interviews = data.allInterviewsJson.nodes; 
 
   return (
     <div>
