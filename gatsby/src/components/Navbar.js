@@ -22,7 +22,7 @@ export default function Navbar() {
     <nav className={"navbar " + (menu ? "navbar-show" : "")}>
       <div className="navbar-list">
         <div className={"navbar-option close-nav-bar " + (menu ? "" : "open-nav-bar")}>
-            <span onClick={() => {toggleMenu()}} >{menu ? <CloseIcon/> : <MenuIcon/>}</span>
+            <button onClick={() => {toggleMenu()}} style={{all: "unset", cursor: "pointer"}} >{menu ? <CloseIcon/> : <MenuIcon/>}</button>
         </div>
         <div className={"navbar-option " + (active === "hello" ? "navbar-option-active" : "")}>
           <a href="/">Hola</a>

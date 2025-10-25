@@ -42,3 +42,14 @@ code {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #a8bbbf;
 }
+
+.page {
+  padding-bottom: 80px;
+}
+
+@media screen and (max-width:600px) {
+  .page {
+    margin-top: 0px;
+    padding-top: 5px;
+  }
+}
