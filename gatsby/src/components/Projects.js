@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 // import { useParams } from 'react-router-dom';
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql, useStaticQuery } from "gatsby";
 
 import Label from "../components/Label";
@@ -12,7 +13,7 @@ export default function Projects(props) {
   const [max_cards, setMaxCards] = useState(3);
 
   const data = useStaticQuery(graphql`
-    query {
+    query ProjectAndImages {
       allProjectsJson {
         nodes {
           title
@@ -27,13 +28,34 @@ export default function Projects(props) {
           }
           parent {
             ... on File {
-              relativePath
+              name
             }
+          }
+        }
+      }
+      allFile(
+        filter: { 
+          sourceInstanceName: { eq: "content" }, 
+          extension: { regex: "/(jpg|jpeg|png|webp)/" }
+          relativePath: { regex: "/projects/" } 
+        }
+      ) {
+        nodes {
+          relativePath
+          childImageSharp {
+            gatsbyImageData(layout: CONSTRAINED)
           }
         }
       }
     }
   `);
+
+  // Diccionario de imágenes
+  const imagesMap = {}
+  data.allFile.nodes.forEach(node => {
+    const baseName = node.relativePath.split('/').pop().split('.').slice(0, -1).join('.')
+    imagesMap[baseName] = getImage(node.childImageSharp)
+  })
 
   useEffect(() => {
     let filtered = data.allProjectsJson.nodes
@@ -60,6 +82,10 @@ export default function Projects(props) {
           <div className="projects-container">
             {
               projects.slice(0,max_cards).map((project) => {
+                
+                const baseName = project.parent.name 
+                const image = imagesMap[baseName]
+                
                 return (
                   <div key={project.title} className="project-card">
                     <div className="project-labels">
@@ -87,7 +113,11 @@ export default function Projects(props) {
                     }
                     </div>
 
-                    <img className="project-image" alt="Proyecto" src={project.image}/>
+                    <GatsbyImage
+                        image={image}
+                        alt={`Imagen representativa de ${project.title}`}
+                        className="project-image"
+                      />
 
                   </div>
                 )
