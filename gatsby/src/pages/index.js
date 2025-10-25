@@ -2,7 +2,7 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/Layout"
-import "./hello.css"
+import "./index.css"
 
 
 // const API = process.env.REACT_APP_API_URL;
