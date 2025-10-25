@@ -75,7 +75,7 @@ export default function Projects(props) {
       projects.length === 0 
       ?
         <section className="project-loading-container" id={props.id}>
-          <h2>Sin resultados</h2>
+          {/* <h2>Sin resultados</h2> */}
         </section>
       :
         <section className="projects-section" id={props.id}>
