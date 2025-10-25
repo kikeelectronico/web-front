@@ -55,7 +55,7 @@ const Index = () => {
               </div>
             </div>
             <div className="job-column">
-              <img className="job-picture" alt="Maños de niños y niñas sobre una mesa blanca formando un círculo con placas electrónicas entre los dedos." fetchpriority="high" src="manos-de-niñes.webp"/>
+              <img className="job-picture" alt="Manos de niños y niñas sobre una mesa blanca formando un círculo con placas electrónicas entre los dedos." fetchpriority="high" src="manos-de-niñes.webp"/>
             </div>
           </div>
         </div>
