@@ -3,6 +3,9 @@ import { Helmet } from "react-helmet"
 
 const Head = () => (
   <Helmet>
+    <meta charset="utf-8" />
+    <link rel="icon" href="images/soldering.png" />
+
     {/* Fuentes */}
     <link href="https://fonts.googleapis.com/css2?family=Satisfy:wght@400&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet" />
