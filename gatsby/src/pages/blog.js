@@ -32,6 +32,8 @@ const Blog = () => {
 
     const posts = data?.allMarkdownRemark?.nodes || [];
 
+    // const posts = []
+
     return (
         <Layout>
             <div className="page">
