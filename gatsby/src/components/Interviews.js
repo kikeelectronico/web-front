@@ -69,7 +69,6 @@ export default function Interviews(props) {
 
                   const baseName = interview.parent.name 
                   const image = imagesMap[baseName]
-                  console.log(baseName)
 
                   return (
                     <div key={interview.title} className="interview-card">
