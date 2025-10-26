@@ -3,6 +3,7 @@ name: Develop - Build and Deploy
 on:
   push:
     branches: [ develop ]
+  workflow_dispatch:
 
 env:
   PROJECT_ID: ${{ secrets.PROJECT_ID }}

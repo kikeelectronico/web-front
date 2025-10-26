@@ -2,7 +2,9 @@ import React from "react";
 
 import Layout from "../components/Layout"
 import SectionTitle from "../components/SectionTitle"
-import Projects from "../components/Projects"
+import Hardware from "../components/Hardware"
+import Software from "../components/Software"
+import Others from "../components/Others"
 
 const Portfolio = () => {
 
@@ -10,11 +12,11 @@ const Portfolio = () => {
     <Layout>
       <div className="page">
         <SectionTitle title="Hardware" image="/soldering.png"/>
-        <Projects type="hardware" id="hardware"/>
+        <Hardware type="hardware" id="hardware"/>
         <SectionTitle title="Software" image="/software.png"/>
-        <Projects type="software" id="software"/>
+        <Software type="software" id="software"/>
         <SectionTitle title="Otros" image="/hand.png"/>
-        <Projects type="contenido" id="others"/>
+        <Others type="contenido" id="others"/>
       </div>
     </Layout>
   )
