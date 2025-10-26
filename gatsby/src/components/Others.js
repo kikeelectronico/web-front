@@ -32,9 +32,9 @@ export default function Others(props) {
       }
       allFile(
         filter: { 
-          sourceInstanceName: { eq: "content" }, 
+          sourceInstanceName: { eq: "projects" }, 
           extension: { regex: "/(jpg|jpeg|png|webp)/" }
-          relativePath: { regex: "/projects/others/" } 
+          relativePath: { regex: "/others/" } 
         }
       ) {
         nodes {

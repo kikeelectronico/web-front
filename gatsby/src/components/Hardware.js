@@ -32,9 +32,9 @@ export default function Hardware(props) {
       }
       allFile(
         filter: { 
-          sourceInstanceName: { eq: "content" }, 
+          sourceInstanceName: { eq: "projects" }, 
           extension: { regex: "/(jpg|jpeg|png|webp)/" }
-          relativePath: { regex: "/projects/hardware/" } 
+          relativePath: { regex: "/hardware/" } 
         }
       ) {
         nodes {
