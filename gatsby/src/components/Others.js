@@ -60,13 +60,13 @@ export default function Others(props) {
     <section className="projects-section" id={props.id}>
       <div className="projects-container">
         {
-          projects.slice(0,max_cards).map((project) => {
+          projects.map((project, index) => {
             
             const baseName = project.parent.name 
             const image = imagesMap[baseName]
             
             return (
-              <div key={project.title} className="project-card">
+              <div key={project.title} className="project-card" style={{display: ((index+1) > max_cards ? "none" : "")}}>
                 <div className="project-labels">
                   {
                     project.type.map(label => {

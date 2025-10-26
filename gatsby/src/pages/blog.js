@@ -52,9 +52,9 @@ const Blog = () => {
                             <section className="posts-section" >
                                 <div className="posts-container">
                                 {
-                                    posts.slice(0,max_cards).map((post) => {
+                                    posts.map((post, index) => {
                                         return (
-                                            <Link to={post.fields.slug} key={post.fields.slug}  style={{ textDecoration: 'none' }}>
+                                            <Link to={post.fields.slug} key={post.fields.slug}  style={{textDecoration: "none", display: ((index+1) > max_cards ? "none" : "")}}>
                                                 <div className="post-card">
                                                     <div>
                                                         <img className="post-image" src={post.thumbnail_image} alt="Imagen representativa del post"/>

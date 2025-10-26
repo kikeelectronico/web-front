@@ -57,13 +57,13 @@ export default function Interviews(props) {
     <section className="interviews-section" id={props.id}>
       <div className="interviews-container">
         {
-          interviews.slice(0,max_cards).map((interview) => {
+          interviews.map((interview, index) => {
 
             const baseName = interview.parent.name 
             const image = imagesMap[baseName]
 
             return (
-              <div key={interview.title} className="interview-card">
+              <div key={interview.title} className="interview-card" style={{display: ((index+1) > max_cards ? "none" : "")}}>
                 <h3 className="interview-title">
                   {interview.title}
                 </h3>
