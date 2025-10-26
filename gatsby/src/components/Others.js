@@ -1,20 +1,17 @@
-import React, { useState, useEffect } from "react";
-// import { useParams } from 'react-router-dom';
+import React, { useState } from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql, useStaticQuery } from "gatsby";
 
-import Label from "../components/Label";
+import Label from "./Label";
 import "./projects.css"
 
-export default function Projects(props) {
+export default function Others(props) {
 
-  // const { tldr } = useParams()
-  const [projects, setProjects] = useState([])
   const [max_cards, setMaxCards] = useState(3);
 
   const data = useStaticQuery(graphql`
-    query ProjectAndImages {
-      allProjectsJson {
+    query OthersAndImages {
+      allOthersJson {
         nodes {
           title
           description
@@ -37,7 +34,7 @@ export default function Projects(props) {
         filter: { 
           sourceInstanceName: { eq: "content" }, 
           extension: { regex: "/(jpg|jpeg|png|webp)/" }
-          relativePath: { regex: "/projects/" } 
+          relativePath: { regex: "/projects/others/" } 
         }
       ) {
         nodes {
@@ -50,24 +47,14 @@ export default function Projects(props) {
     }
   `);
 
+  const projects = data.allOthersJson.nodes
+
   // Diccionario de imágenes
   const imagesMap = {}
   data.allFile.nodes.forEach(node => {
     const baseName = node.relativePath.split('/').pop().split('.').slice(0, -1).join('.')
     imagesMap[baseName] = getImage(node.childImageSharp)
   })
-
-  useEffect(() => {
-    let filtered = data.allProjectsJson.nodes
-
-    if (props.type) {
-      filtered = filtered.filter((p) =>
-        p.type && p.type.includes(props.type)
-      );
-    }
-
-    setProjects(filtered)
-  }, [data, props.type])
 
   return (
     <>
