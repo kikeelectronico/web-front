@@ -47,7 +47,7 @@ export default function Software(props) {
     }
   `);
 
-  let projects = data.allSoftwareJson.nodes
+  const projects = data.allSoftwareJson.nodes
 
   // Diccionario de imágenes
   const imagesMap = {}
