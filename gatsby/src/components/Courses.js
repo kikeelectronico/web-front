@@ -37,9 +37,9 @@ export default function Courses(props) {
         <section className="courses-section" id={props.id}>
           <div className="courses-container">
             {
-              courses.slice(0,max_cards).map((course) => {
+              courses.map((course, index) => {
                 return (
-                  <div key={course.title} className="course-card">
+                  <div key={course.title} className="course-card" style={{display: ((index+1) > max_cards ? "none" : "")}}>
                     <h3 className="course-title">
                       {course.title}
                     </h3>
