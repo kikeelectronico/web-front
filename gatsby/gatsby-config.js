@@ -23,15 +23,8 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "knowme",
-        path: "./content/knowme",
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "projects",
-        path: "./content/projects",
+        name: "content",
+        path: "./content/",
       },
     },
     {

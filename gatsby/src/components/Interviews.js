@@ -29,9 +29,9 @@ export default function Interviews(props) {
       }
       allFile(
         filter: { 
-          sourceInstanceName: { eq: "knowme" }, 
+          sourceInstanceName: { eq: "content" }, 
           extension: { regex: "/(jpg|jpeg|png|webp)/" }
-          relativePath: { regex: "/interviews/" } 
+          relativePath: { regex: "/knowme/interviews/" } 
         }
       ) {
         nodes {

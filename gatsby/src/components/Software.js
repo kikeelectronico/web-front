@@ -32,9 +32,9 @@ export default function Software(props) {
       }
       allFile(
         filter: { 
-          sourceInstanceName: { eq: "projects" }, 
+          sourceInstanceName: { eq: "content" }, 
           extension: { regex: "/(jpg|jpeg|png|webp)/" }
-          relativePath: { regex: "/software/" } 
+          relativePath: { regex: "/projects/software/" } 
         }
       ) {
         nodes {
